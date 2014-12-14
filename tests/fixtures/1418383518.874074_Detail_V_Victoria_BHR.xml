@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ROOT xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://trackernet.lul.co.uk">
+  <Disclaimer>This system is an INFORMATION ONLY system, relying entirely on 
+				information received from the relevant Operational Railway Control System(s). It is NOT 
+				considered a safety related system in the Railway Engineering sense. However, 
+				the information reported may trigger user intervention by staff regarding possible 
+				incidents on the railway, and confirmation of the situation observed should be obtained prior 
+				to any corrective action being taken.</Disclaimer>
+  <WhenCreated>12 Dec 2014 11:24:47</WhenCreated>
+  <Line>V</Line>
+  <LineName>Victoria Line</LineName>
+  <S Code="BHR" Mess="" N="Blackhorse Road." CurTime="11:24:47">
+    <P N="Northbound - Platform 1" Num="1" TrackCode="TV6072" NextTrain="false">
+      <T LCID="1067229" SetNo="227" TripNo="8" SecondsTo="344" TimeTo="6:00" Location="Between Finsbury Park and Seven Sisters" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:24:27" DepartInterval="344" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6234" LN="V" />
+      <T LCID="1067259" SetNo="246" TripNo="6" SecondsTo="385" TimeTo="6:00" Location="Between Finsbury Park and Seven Sisters" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:22:40" DepartInterval="385" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6258" LN="V" />
+      <T LCID="1067499" SetNo="235" TripNo="8" SecondsTo="495" TimeTo="8:00" Location="At Finsbury Park" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:24:11" DepartInterval="495" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6274" LN="V" />
+      <T LCID="1066630" SetNo="213" TripNo="10" SecondsTo="534" TimeTo="9:00" Location="Between Highbury &amp; Islington and Finsbury Park" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:24:36" DepartInterval="534" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6286" LN="V" />
+      <T LCID="1067357" SetNo="247" TripNo="6" SecondsTo="611" TimeTo="10:00" Location="At Highbury &amp; Islington" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:24:15" DepartInterval="611" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6324" LN="V" />
+      <T LCID="1066682" SetNo="217" TripNo="10" SecondsTo="738" TimeTo="12:00" Location="At Kings Cross St. Pancras" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:24:15" DepartInterval="738" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6374" LN="V" />
+      <T LCID="1067418" SetNo="215" TripNo="10" SecondsTo="923" TimeTo="15:00" Location="At Warren Street" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:24:31" DepartInterval="923" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6474" LN="V" />
+      <T LCID="1067198" SetNo="212" TripNo="12" SecondsTo="1291" TimeTo="22:00" Location="At Victoria" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:23:56" DepartInterval="1291" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6624" LN="V" />
+      <T LCID="1066592" SetNo="220" TripNo="12" SecondsTo="1520" TimeTo="25:00" Location="Approaching Vauxhall" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:24:45" DepartInterval="1520" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6734" LN="V" />
+      <T LCID="1066842" SetNo="235" TripNo="7" SecondsTo="1658" TimeTo="28:00" Location="Between Brixton and Stockwell" Destination="Walthamstow Central" DestCode="457" Order="0" DepartTime="11:24:41" DepartInterval="1658" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6786" LN="V" />
+    </P>
+    <P N="Southbound - Platform 2" Num="2" TrackCode="TV6077" NextTrain="false" />
+  </S>
+</ROOT>

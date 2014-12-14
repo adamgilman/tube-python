@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ROOT xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://trackernet.lul.co.uk">
+  <Disclaimer>This system is an INFORMATION ONLY system, relying entirely on 
+				information received from the relevant Operational Railway Control System(s). It is NOT 
+				considered a safety related system in the Railway Engineering sense. However, 
+				the information reported may trigger user intervention by staff regarding possible 
+				incidents on the railway, and confirmation of the situation observed should be obtained prior 
+				to any corrective action being taken.</Disclaimer>
+  <WhenCreated>12 Dec 2014 11:26:10</WhenCreated>
+  <Line>V</Line>
+  <LineName>Victoria Line</LineName>
+  <S Code="STK" Mess="" N="Stockwell." CurTime="11:26:10">
+    <P N="Northbound - Platform 1" Num="1" TrackCode="TV6774" NextTrain="false">
+      <T LCID="1067518" SetNo="237" TripNo="8" SecondsTo="68" TimeTo="1:30" Location="0" Destination="Seven Sisters" DestCode="397" Order="0" DepartTime="11:26:02" DepartInterval="68" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6820_1" LN="V" />
+    </P>
+    <P N="Southbound - Platform 4" Num="4" TrackCode="TV6775" NextTrain="false">
+      <T LCID="1067152" SetNo="225" TripNo="9" SecondsTo="0" TimeTo="-" Location="At Platform" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:25:47" DepartInterval="0" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6775" LN="V" />
+      <T LCID="1067565" SetNo="222" TripNo="9" SecondsTo="76" TimeTo="1:30" Location="Between Vauxhall and Stockwell" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:25:56" DepartInterval="76" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6733" LN="V" />
+      <T LCID="1065036" SetNo="241" TripNo="7" SecondsTo="144" TimeTo="2:30" Location="Departed Pimlico" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:26:07" DepartInterval="144" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6677" LN="V" />
+      <T LCID="1066710" SetNo="221" TripNo="9" SecondsTo="227" TimeTo="4:00" Location="Between Victoria and Pimlico" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:26:04" DepartInterval="227" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6637" LN="V" />
+      <T LCID="1067589" SetNo="231" TripNo="9" SecondsTo="324" TimeTo="5:00" Location="At Victoria" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:26:07" DepartInterval="324" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6621" LN="V" />
+      <T LCID="1067624" SetNo="242" TripNo="7" SecondsTo="773" TimeTo="13:00" Location="Between Warren Street and Euston" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:26:07" DepartInterval="773" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6467" LN="V" />
+      <T LCID="1067679" SetNo="245" TripNo="7" SecondsTo="954" TimeTo="16:00" Location="Between Highbury &amp; Islington and Kings Cross St. P" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:26:07" DepartInterval="954" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6365_2" LN="V" />
+      <T LCID="1067672" SetNo="244" TripNo="7" SecondsTo="1167" TimeTo="19:00" Location="Departed Finsbury Park" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:26:07" DepartInterval="1167" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6279" LN="V" />
+      <T LCID="1067290" SetNo="232" TripNo="9" SecondsTo="1420" TimeTo="24:00" Location="At Seven Sisters Platform 5" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:25:56" DepartInterval="1420" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6225" LN="V" />
+      <T LCID="1068894" SetNo="000" TripNo="0" SecondsTo="1485" TimeTo="25:00" Location="Northumberland Park Depot Area" Destination="Brixton" DestCode="88" Order="0" DepartTime="11:25:31" DepartInterval="1485" Departed="0" Direction="0" IsStalled="0" TrackCode="TV6945" LN="V" />
+    </P>
+  </S>
+</ROOT>
