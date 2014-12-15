@@ -1,3 +1,4 @@
+
 def test_TFLObject():
 	'''
 	Test implementation of TFL object
@@ -10,6 +11,11 @@ def test_TFLObject():
 
 def test_LinesStationMapping():
 	'''
+	Test that I can access stations and
+		then subsequently the lines at statations and
+		then subsequently the stations along those lines and
+		then etc
+
 	>>> from tflTube import TFL
 	>>> tfl = TFL()
 	>>> tfl.map.lines
@@ -23,3 +29,31 @@ def test_LinesStationMapping():
 
 	'''
 	pass
+
+def test_GetPlatformsAvailableAtStationsOnLine():
+	'''
+	Test that I can access the platforms that exist at 
+	a station along a line
+		: At Oxford Circus, on the Victoria line, 
+			there is a northbound and southbound platform
+
+	>>> from tflTube import TFL
+	>>> tfl = TFL()
+	>>> oxc = tfl.map.stations['OXC']
+	>>> oxc
+	<tflTube.TFLStation: Oxford Circus>
+
+	>>> baker = tfl.map.lines['B']
+	>>> baker
+	<tflTube.TFLLine: Bakerloo>
+	
+	#>>> tfl.getPlatforms(oxc, baker)
+	#[<tflTube.TFLPlatform: Southbound - Platform 3>, <tflTube.TFLPlatform: Northbound - Platform 4>]
+	'''
+	pass
+
+
+
+
+
+
