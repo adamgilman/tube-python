@@ -1,4 +1,3 @@
-from tflDetail import TFLDetail
 import requests, logging
 
 
@@ -15,18 +14,7 @@ class TFL(object):
 		if line.code not in station.lines.keys():
 			return None
 
-
-		url = "http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/%s/%s" % (line.code, station.code)
-		xml = requests.get(url).text.replace(u"\xef\xbb\xbf", "") #strange unicode error
-		detail = TFLDetail(xml)
-		
-		platManager = TFLPlatformManager()
-		for plat in detail.station.platforms:
-			platManager.append( TFLPlatform(plat) )
-
-		return platManager
-
-		
+		return []
 
 class TFLTubeMap(object):
 	def __init__(self):

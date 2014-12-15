@@ -2,6 +2,7 @@ bin/*
 include/*
 lib/*
 man/*
+legacy/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
