@@ -47,7 +47,7 @@ class TFLDetailPlatform(object):
 	def __init__(self, platformXMLd):
 		self.name		= platformXMLd['@N']
 		self.trackCode 	= platformXMLd['@TrackCode']
-		self.trains 	= self._loadTrains(platformXMLd)
+		#self.trains 	= self._loadTrains(platformXMLd)
 
 	def _loadTrains(self, platformXMLd):
 		ret = []

@@ -79,7 +79,7 @@ class TFLPlatformManager(list):
 class TFLPlatform(object):
 	def __init__(self, detailPlat):
 		self.name = detailPlat.name
-		self.trains = self.getTrains(detailPlat)
+		#self.trains = self.getTrains(detailPlat)
 
 	def getTrains(self, detailPlat):
 		ret = []
