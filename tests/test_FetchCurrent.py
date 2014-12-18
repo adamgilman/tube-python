@@ -47,35 +47,25 @@ class TestTFLTubeMap(unittest.TestCase):
 	def setUp(self):
 		self.tfl = TFL()
 		self.current = self.tfl.map
-		
-	def test_HasTubeLines(self):
-		self.assertIsInstance(self.current.lines.getLine("V"), TFLLine)
-		self.assertNotIsInstance(self.current.lines.getLine("X"), TFLLine)
-		self.assertIsNone(self.current.lines.getLine("X"))
 
-		self.assertEqual(self.current.lines.getLine("V").name, "Victoria")
-		self.assertEqual(self.current.lines.getLine("V").code, "V")
-		self.assertEqual(self.current.lines["V"].name, "Victoria")
+	def test_GetStation(self):
+		self.assertIsInstance(self.tfl.map.get(stationcode="OXC"), TFLStation)
+		self.assertIsNone(self.tfl.map.get(stationcode="XXX"))
+		self.assertIsNone(self.tfl.map.get())
 
-		self.assertEqual(len(self.current.lines), 10)
+	def test_GetLine(self):
+		self.assertIsInstance(self.tfl.map.get(linecode="B"), TFLLine)
+		self.assertIsNone(self.tfl.map.get(linecode="X"))
+		self.assertIsNone(self.tfl.map.get())
 
-	def test_HasTubeStations(self):
-		self.assertIsInstance(self.current.stations.getStation("OXC"), TFLStation)
-		self.assertNotIsInstance(self.current.stations.getStation("X"), TFLStation)
-		self.assertIsNone(self.current.stations.getStation("X"))
+	def test_GetStationLine(self):
+		self.assertIsInstance(self.tfl.map.get(linecode="B", stationcode="OXC"), dict)
+		self.assertIsInstance(self.tfl.map.get(linecode="B", stationcode="OXC")['station'], TFLStation)
+		self.assertIsInstance(self.tfl.map.get(linecode="B", stationcode="OXC")['line'], TFLLine)
 
-		self.assertEqual(self.current.stations.getStation("OXC").name, "Oxford Circus")
-		self.assertEqual(self.current.stations.getStation("KXX").code, "KXX")
-		self.assertEqual(self.current.stations['KXX'].name, "King's Cross St Pancras")
-
-		self.assertEqual(len(self.current.stations), 263)
+	def test_FailGetStationLine(self):
+		#district line does not go through OXC
+		self.assertIsNone(self.tfl.map.get(linecode="D", stationcode="OXC"))
 
 
-	def test_HasStationOnLine(self):
-		self.assertTrue(set(['OLD', 'KXX']).issubset(self.current.lines['N'].stations.keys()) )
-		self.assertTrue(set(['OXC', 'HBY', 'KXX']).issubset(self.current.lines['V'].stations.keys()) )
-
-	def test_HasLineOnStation(self):
-		self.assertTrue(set(['V', 'C']).issubset(self.current.stations['OXC'].lines.keys()) )
-		self.assertTrue(set(['V', 'N']).issubset(self.current.stations['KXX'].lines.keys()) )
-
+	#self.assertEqual(len(self.current.stations), 263)
