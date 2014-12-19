@@ -1,0 +1,73 @@
+{
+    "version": 1, 
+    "interactions": [
+        {
+            "request": {
+                "body": null, 
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.5.0 CPython/2.7.6 Darwin/14.0.0"
+                    ]
+                }, 
+                "method": "GET", 
+                "uri": "http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/B/OXC"
+            }, 
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "headers": {
+                    "content-length": [
+                        "5590"
+                    ], 
+                    "x-aspnet-version": [
+                        "4.0.30319"
+                    ], 
+                    "set-cookie": [
+                        "ASP.NET_SessionId=ylok225qpgbf4dapxhprlqxp; path=/; HttpOnly"
+                    ], 
+                    "data-last-updated": [
+                        "12/19/2014 08:06:37"
+                    ], 
+                    "expires": [
+                        "Fri, 19 Dec 2014 08:07:18 GMT"
+                    ], 
+                    "vary": [
+                        "*"
+                    ], 
+                    "server": [
+                        "Microsoft-IIS/7.0"
+                    ], 
+                    "last-modified": [
+                        "Fri, 19 Dec 2014 08:06:48 GMT"
+                    ], 
+                    "cache-control": [
+                        "public, max-age=30"
+                    ], 
+                    "date": [
+                        "Fri, 19 Dec 2014 08:06:48 GMT"
+                    ], 
+                    "x-powered-by": [
+                        "ASP.NET"
+                    ], 
+                    "content-type": [
+                        "text/xml"
+                    ]
+                }, 
+                "body": {
+                    "string": "\ufeff<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ROOT xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://trackernet.lul.co.uk\">\r\n  <Disclaimer>This system is an INFORMATION ONLY system, relying entirely on \r\n\t\t\t\tinformation received from the relevant Operational Railway Control System(s). It is NOT \r\n\t\t\t\tconsidered a safety related system in the Railway Engineering sense. However, \r\n\t\t\t\tthe information reported may trigger user intervention by staff regarding possible \r\n\t\t\t\tincidents on the railway, and confirmation of the situation observed should be obtained prior \r\n\t\t\t\tto any corrective action being taken.</Disclaimer>\r\n  <WhenCreated>19 Dec 2014 8:06:38</WhenCreated>\r\n  <Line>B</Line>\r\n  <LineName>Bakerloo Line</LineName>\r\n  <S Code=\"OXC\" Mess=\"\" N=\"Oxford Circus.\" CurTime=\"8:06:38\">\r\n    <P N=\"Southbound - Platform 3\" Num=\"3\" TrackCode=\"TB385\" NextTrain=\"false\">\r\n      <T LCID=\"1009664\" SetNo=\"212\" TripNo=\"1\" SecondsTo=\"0\" TimeTo=\"-\" Location=\"At Platform\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:05:45\" DepartInterval=\"0\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TB385\" LN=\"B\" />\r\n      <T LCID=\"1009581\" SetNo=\"242\" TripNo=\"2\" SecondsTo=\"231\" TimeTo=\"4:00\" Location=\"At Baker Street Platform 8\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:05:44\" DepartInterval=\"231\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TB425A\" LN=\"B\" />\r\n      <T LCID=\"1009213\" SetNo=\"234\" TripNo=\"2\" SecondsTo=\"314\" TimeTo=\"5:00\" Location=\"At Marylebone Platform 2\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:06:33\" DepartInterval=\"314\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TB435A\" LN=\"B\" />\r\n      <T LCID=\"1008664\" SetNo=\"232\" TripNo=\"6\" SecondsTo=\"441\" TimeTo=\"7:00\" Location=\"Left Paddington\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:06:33\" DepartInterval=\"441\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBKE\" LN=\"B\" />\r\n      <T LCID=\"1009183\" SetNo=\"204\" TripNo=\"3\" SecondsTo=\"666\" TimeTo=\"11:00\" Location=\"Left Maida Vale\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:06:20\" DepartInterval=\"666\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TB475B\" LN=\"B\" />\r\n      <T LCID=\"1008719\" SetNo=\"221\" TripNo=\"5\" SecondsTo=\"809\" TimeTo=\"13:00\" Location=\"At Kilburn Park Platform 2\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:06:02\" DepartInterval=\"809\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TB491A\" LN=\"B\" />\r\n      <T LCID=\"1009789\" SetNo=\"213\" TripNo=\"1\" SecondsTo=\"965\" TimeTo=\"16:00\" Location=\"Approaching Queen's Park\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:06:26\" DepartInterval=\"965\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBFC_2\" LN=\"B\" />\r\n      <T LCID=\"1009335\" SetNo=\"247\" TripNo=\"4\" SecondsTo=\"1134\" TimeTo=\"19:00\" Location=\"Queen's Park North Sidings\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:06:36\" DepartInterval=\"1134\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBJE\" LN=\"B\" />\r\n      <T LCID=\"1009043\" SetNo=\"226\" TripNo=\"4\" SecondsTo=\"1467\" TimeTo=\"24:00\" Location=\"At Harlesden Platform 1\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:06:19\" DepartInterval=\"1467\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBDK\" LN=\"B\" />\r\n      <T LCID=\"1009862\" SetNo=\"214\" TripNo=\"1\" SecondsTo=\"1636\" TimeTo=\"27:00\" Location=\"At Stonebridge Park Platform 1\" Destination=\"Elephant and Castle\" DestCode=\"154\" Order=\"0\" DepartTime=\"8:06:06\" DepartInterval=\"1636\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBDH1\" LN=\"B\" />\r\n    </P>\r\n    <P N=\"Northbound - Platform 4\" Num=\"4\" TrackCode=\"TB376\" NextTrain=\"false\">\r\n      <T LCID=\"1009350\" SetNo=\"236\" TripNo=\"3\" SecondsTo=\"153\" TimeTo=\"3:00\" Location=\"At Piccadilly Circus Platform 1\" Destination=\"Queen's Park\" DestCode=\"369\" Order=\"0\" DepartTime=\"8:06:24\" DepartInterval=\"153\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBNB_1\" LN=\"B\" />\r\n      <T LCID=\"1009546\" SetNo=\"210\" TripNo=\"2\" SecondsTo=\"254\" TimeTo=\"4:30\" Location=\"At Charing Cross Platform 1\" Destination=\"Harrow and Wealdstone\" DestCode=\"207\" Order=\"0\" DepartTime=\"8:06:20\" DepartInterval=\"254\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TB346A\" LN=\"B\" />\r\n      <T LCID=\"1008541\" SetNo=\"231\" TripNo=\"5\" SecondsTo=\"366\" TimeTo=\"6:00\" Location=\"North of Waterloo\" Destination=\"Queen's Park\" DestCode=\"369\" Order=\"0\" DepartTime=\"8:06:36\" DepartInterval=\"366\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TB332A\" LN=\"B\" />\r\n      <T LCID=\"1008229\" SetNo=\"246\" TripNo=\"5\" SecondsTo=\"534\" TimeTo=\"9:00\" Location=\"Approaching Lambeth North\" Destination=\"Stonebridge Park\" DestCode=\"345\" Order=\"0\" DepartTime=\"8:06:36\" DepartInterval=\"534\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBRB\" LN=\"B\" />\r\n      <T LCID=\"1009592\" SetNo=\"211\" TripNo=\"2\" SecondsTo=\"750\" TimeTo=\"12:00\" Location=\"At Elephant &amp; Castle Platform 3\" Destination=\"Queen's Park\" DestCode=\"369\" Order=\"0\" DepartTime=\"8:04:21\" DepartInterval=\"750\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBWE\" LN=\"B\" />\r\n      <T LCID=\"1009467\" SetNo=\"240\" TripNo=\"3\" SecondsTo=\"759\" TimeTo=\"13:00\" Location=\"At Elephant &amp; Castle Platform 4\" Destination=\"Check Front of Train\" DestCode=\"0\" Order=\"0\" DepartTime=\"8:06:36\" DepartInterval=\"759\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBTC\" LN=\"B\" />\r\n    </P>\r\n  </S>\r\n</ROOT>"
+                }
+            }
+        }
+    ]
+}

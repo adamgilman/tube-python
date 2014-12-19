@@ -5,10 +5,12 @@ from tflAPI import TFLapi
 class TFL(object):
 	def __init__(self):
 		logging.getLogger("requests").setLevel(logging.WARNING)
-		self.map = TFLTubeMap()
+		self.api = TFLapi()
+		self.map = TFLTubeMap(self.api)
 	
 class TFLTubeMap(object):
-	def __init__(self):
+	def __init__(self, api):
+		self.api = api
 		from tflStationNames import stations, lineStations
 
 		linesList = [TFLLine("C", "Central"), TFLLine("B", "Bakerloo"), TFLLine("D", "District"), TFLLine("H", "Hammersmith & Circle"), TFLLine("J", "Jubilee"), TFLLine("M", "Metropolitan"), TFLLine("N", "Nothern"), TFLLine("P", "Piccadilly"), TFLLine("W", "Waterloo & City"), TFLLine("V", "Victoria")]
@@ -62,7 +64,38 @@ class TFLTubeMap(object):
 			#check if station is on line
 			if linecode not in self._stations[stationcode]._lines.keys():
 				return None
-			return {'station' : self._stations[stationcode], 'line' : self._lines[linecode]}
+			return TFLStationLinePlatform(	self._stations[stationcode], 
+											self._lines[linecode],
+											self.api)
+
+class TFLPlatform(object):
+	def __init__(self):
+		self.name 				= None
+		self.platform_number 	= None
+		self.track_code 		= None
+		self.next_train 		= None
+
+
+class TFLStationLinePlatform(object):
+	def __init__(self, station, line, api):
+		self.api 		= api
+		self.station 	= station
+		self.line 		= line
+		self.platforms 	= {}
+		self._getPlatforms()
+	def _getPlatforms(self):
+		details = self.api.getDetailed(self.station.code, self.line.code)
+		self._loadPlatformsFromDetail(details.platforms)
+		return self.platforms
+
+	def _loadPlatformsFromDetail(self, detailPlatforms):
+		for p in detailPlatforms:
+			newP = TFLPlatform()
+			newP.name = p.name
+			newP.platform_number = p.platform_number
+			newP.track_code = p.platform_number
+			newP.next_train = p.track_code
+			self.platforms[newP.name] = newP
 
 class TFLStation(object):
 	def __init__(self, code, name):
