@@ -21,7 +21,7 @@ class TestTFLPlatforms(unittest.TestCase):
 		self.tfl = TFL()
 		self.current = self.tfl.map
 
-	def test_GetPlatforms(self):
+	def test_GetPlatformsAtStationLine(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
 			platforms = self.tfl.map.get(linecode="B", stationcode="OXC").platforms
 			self.assertIsInstance( platforms, dict)
@@ -29,6 +29,21 @@ class TestTFLPlatforms(unittest.TestCase):
 			first_platform = platforms[platforms.keys()[0]]
 			self.assertIsInstance( first_platform, TFLPlatform)
 			self.assertEqual( first_platform.name, "Northbound - Platform 4")
+
+class TestTFLTrains(unittest.TestCase):
+	def setUp(self):
+		self.tfl = TFL()
+	def test_GetTrainsOnPlatform(self):
+		with my_vcr.use_cassette('Detail-OXC-B.json'):
+			platforms = self.tfl.map.get(linecode="B", stationcode="OXC").platforms
+			first_platform = platforms[platforms.keys()[0]]
+			self.assertIsInstance( first_platform.trains, dict)
+
+			first_train = first_platform.trains[first_platform.trains.keys()[0]]
+			second_train = first_platform.trains[first_platform.trains.keys()[1]]
+			self.assertEqual( first_train.leadingcar_id, "1009467" )
+			self.assertEqual( second_train.destination, "Queen's Park")
+
 
 class TestTFLTubeMap(unittest.TestCase):
 	def setUp(self):

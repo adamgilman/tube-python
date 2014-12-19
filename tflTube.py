@@ -68,13 +68,55 @@ class TFLTubeMap(object):
 											self._lines[linecode],
 											self.api)
 
-class TFLPlatform(object):
+class TFLTrain(object):
 	def __init__(self):
-		self.name 				= None
-		self.platform_number 	= None
-		self.track_code 		= None
-		self.next_train 		= None
+		self.leadingcar_id = None
+		self.set_number = None
+		self.trip_number = None
+		self.arrival_seconds = None
+		self.arrival_time = None
+		self.current_location = None
+		self.destination = None
+		self.destination_code = None
+		self.platform_departure_time = None
+		self.interval_between_previous_train = None
+		self.departed_current_station = None
+		self.direction = None
+		self.track_code = None
 
+class TFLPlatform(object):
+	def __init__(self, api, detailPlatform):
+		self.api = api 
+		self._detailPlatform = detailPlatform
+		self.name = None
+		self.platform_number = None
+		self.track_code = None
+		self.next_train = None
+		self.trains	= {}
+
+		self._getTrains()
+
+	def _getTrains(self):
+		detailTrains = self._detailPlatform.trains
+		self._loadTrainFromDetail(detailTrains)
+
+	def _loadTrainFromDetail(self, detailTrains):
+		for d in detailTrains:
+			newT = TFLTrain()
+			newT.leadingcar_id = d.leadingcar_id
+			newT.set_number = d.set_number
+			newT.trip_number = d.trip_number
+			newT.arrival_seconds = d.arrival_seconds
+			newT.arrival_time = d.arrival_time
+			newT.current_location = d.current_location
+			newT.destination = d.destination
+			newT.destination_code = d.destination_code
+			newT.platform_departure_time = d.platform_departure_time
+			newT.interval_between_previous_train = d.interval_between_previous_train
+			newT.departed_current_station = d.departed_current_station
+			newT.direction = d.direction
+			newT.track_code = d.track_code
+			self.trains[newT.leadingcar_id] = newT
 
 class TFLStationLinePlatform(object):
 	def __init__(self, station, line, api):
@@ -82,15 +124,16 @@ class TFLStationLinePlatform(object):
 		self.station 	= station
 		self.line 		= line
 		self.platforms 	= {}
+
 		self._getPlatforms()
+
 	def _getPlatforms(self):
 		details = self.api.getDetailed(self.station.code, self.line.code)
 		self._loadPlatformsFromDetail(details.platforms)
-		return self.platforms
 
 	def _loadPlatformsFromDetail(self, detailPlatforms):
 		for p in detailPlatforms:
-			newP = TFLPlatform()
+			newP = TFLPlatform(self.api, p)
 			newP.name = p.name
 			newP.platform_number = p.platform_number
 			newP.track_code = p.platform_number
