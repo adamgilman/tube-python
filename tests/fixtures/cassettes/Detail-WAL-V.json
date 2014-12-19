@@ -1,0 +1,73 @@
+{
+    "version": 1, 
+    "interactions": [
+        {
+            "request": {
+                "body": null, 
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.5.0 CPython/2.7.6 Darwin/14.0.0"
+                    ]
+                }, 
+                "method": "GET", 
+                "uri": "http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/V/WAL"
+            }, 
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "headers": {
+                    "content-length": [
+                        "8786"
+                    ], 
+                    "x-aspnet-version": [
+                        "4.0.30319"
+                    ], 
+                    "set-cookie": [
+                        "ASP.NET_SessionId=iktlmsctdachz3ezaz3fnmdj; path=/; HttpOnly"
+                    ], 
+                    "data-last-updated": [
+                        "12/19/2014 08:06:34"
+                    ], 
+                    "expires": [
+                        "Fri, 19 Dec 2014 08:07:21 GMT"
+                    ], 
+                    "vary": [
+                        "*"
+                    ], 
+                    "server": [
+                        "Microsoft-IIS/7.0"
+                    ], 
+                    "last-modified": [
+                        "Fri, 19 Dec 2014 08:06:51 GMT"
+                    ], 
+                    "cache-control": [
+                        "public, max-age=30"
+                    ], 
+                    "date": [
+                        "Fri, 19 Dec 2014 08:06:50 GMT"
+                    ], 
+                    "x-powered-by": [
+                        "ASP.NET"
+                    ], 
+                    "content-type": [
+                        "text/xml"
+                    ]
+                }, 
+                "body": {
+                    "string": "\ufeff<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ROOT xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://trackernet.lul.co.uk\">\r\n  <Disclaimer>This system is an INFORMATION ONLY system, relying entirely on \r\n\t\t\t\tinformation received from the relevant Operational Railway Control System(s). It is NOT \r\n\t\t\t\tconsidered a safety related system in the Railway Engineering sense. However, \r\n\t\t\t\tthe information reported may trigger user intervention by staff regarding possible \r\n\t\t\t\tincidents on the railway, and confirmation of the situation observed should be obtained prior \r\n\t\t\t\tto any corrective action being taken.</Disclaimer>\r\n  <WhenCreated>19 Dec 2014 8:06:34</WhenCreated>\r\n  <Line>V</Line>\r\n  <LineName>Victoria Line</LineName>\r\n  <S Code=\"WAL\" Mess=\"\" N=\"Walthamstow Central.\" CurTime=\"8:06:34\">\r\n    <P N=\"Southbound - Platform 1\" Num=\"1\" TrackCode=\"TV6024\" NextTrain=\"false\">\r\n      <T LCID=\"1008667\" SetNo=\"221\" TripNo=\"4\" SecondsTo=\"143\" TimeTo=\"2:30\" Location=\"At Blackhorse Road\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:06\" DepartInterval=\"143\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6072\" LN=\"V\" />\r\n      <T LCID=\"1009500\" SetNo=\"237\" TripNo=\"2\" SecondsTo=\"394\" TimeTo=\"7:00\" Location=\"At Seven Sisters\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:21\" DepartInterval=\"394\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6214\" LN=\"V\" />\r\n      <T LCID=\"1008450\" SetNo=\"210\" TripNo=\"8\" SecondsTo=\"503\" TimeTo=\"8:00\" Location=\"Between Finsbury Park and Seven Sisters\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:26\" DepartInterval=\"503\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6238\" LN=\"V\" />\r\n      <T LCID=\"1009524\" SetNo=\"240\" TripNo=\"2\" SecondsTo=\"638\" TimeTo=\"11:00\" Location=\"At Finsbury Park\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:05:50\" DepartInterval=\"638\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6274\" LN=\"V\" />\r\n      <T LCID=\"1008761\" SetNo=\"214\" TripNo=\"6\" SecondsTo=\"668\" TimeTo=\"11:00\" Location=\"Between Highbury &amp; Islington and Finsbury Park\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:31\" DepartInterval=\"668\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6282_2\" LN=\"V\" />\r\n      <T LCID=\"1008796\" SetNo=\"222\" TripNo=\"4\" SecondsTo=\"777\" TimeTo=\"13:00\" Location=\"Between Kings Cross St. Pancras and Highbury &amp; Isl\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:31\" DepartInterval=\"777\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6362\" LN=\"V\" />\r\n      <T LCID=\"1009557\" SetNo=\"241\" TripNo=\"2\" SecondsTo=\"971\" TimeTo=\"16:00\" Location=\"At Euston\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:10\" DepartInterval=\"971\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6424\" LN=\"V\" />\r\n      <T LCID=\"1006756\" SetNo=\"206\" TripNo=\"4\" SecondsTo=\"1066\" TimeTo=\"18:00\" Location=\"At Warren Street\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:01\" DepartInterval=\"1066\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6474\" LN=\"V\" />\r\n      <T LCID=\"1009597\" SetNo=\"242\" TripNo=\"2\" SecondsTo=\"1212\" TimeTo=\"20:00\" Location=\"Between Green Park and Oxford Circus\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:21\" DepartInterval=\"1212\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6564\" LN=\"V\" />\r\n      <T LCID=\"1008929\" SetNo=\"224\" TripNo=\"4\" SecondsTo=\"1317\" TimeTo=\"22:00\" Location=\"Approaching Green Park\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:31\" DepartInterval=\"1317\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6584\" LN=\"V\" />\r\n      <T LCID=\"1009610\" SetNo=\"243\" TripNo=\"2\" SecondsTo=\"1439\" TimeTo=\"24:00\" Location=\"At Victoria\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:31\" DepartInterval=\"1439\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6628\" LN=\"V\" />\r\n      <T LCID=\"1009630\" SetNo=\"244\" TripNo=\"2\" SecondsTo=\"1663\" TimeTo=\"28:00\" Location=\"Approaching Vauxhall\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:21\" DepartInterval=\"1663\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6734\" LN=\"V\" />\r\n      <T LCID=\"1008999\" SetNo=\"225\" TripNo=\"4\" SecondsTo=\"1775\" TimeTo=\"30:00\" Location=\"At Stockwell\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:06\" DepartInterval=\"1775\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6774\" LN=\"V\" />\r\n    </P>\r\n    <P N=\"Southbound - Platform 2\" Num=\"2\" TrackCode=\"TV6025\" NextTrain=\"false\">\r\n      <T LCID=\"1009472\" SetNo=\"220\" TripNo=\"5\" SecondsTo=\"0\" TimeTo=\"-\" Location=\"At Platform\" Destination=\"Brixton\" DestCode=\"88\" Order=\"0\" DepartTime=\"8:05:11\" DepartInterval=\"0\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6025\" LN=\"V\" />\r\n      <T LCID=\"1008667\" SetNo=\"221\" TripNo=\"4\" SecondsTo=\"153\" TimeTo=\"3:00\" Location=\"At Blackhorse Road\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:06\" DepartInterval=\"153\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6072\" LN=\"V\" />\r\n      <T LCID=\"1009500\" SetNo=\"237\" TripNo=\"2\" SecondsTo=\"404\" TimeTo=\"7:00\" Location=\"At Seven Sisters\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:21\" DepartInterval=\"404\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6214\" LN=\"V\" />\r\n      <T LCID=\"1008450\" SetNo=\"210\" TripNo=\"8\" SecondsTo=\"513\" TimeTo=\"9:00\" Location=\"Between Finsbury Park and Seven Sisters\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:26\" DepartInterval=\"513\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6238\" LN=\"V\" />\r\n      <T LCID=\"1009524\" SetNo=\"240\" TripNo=\"2\" SecondsTo=\"648\" TimeTo=\"11:00\" Location=\"At Finsbury Park\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:05:50\" DepartInterval=\"648\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6274\" LN=\"V\" />\r\n      <T LCID=\"1008761\" SetNo=\"214\" TripNo=\"6\" SecondsTo=\"678\" TimeTo=\"11:00\" Location=\"Between Highbury &amp; Islington and Finsbury Park\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:31\" DepartInterval=\"678\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6282_2\" LN=\"V\" />\r\n      <T LCID=\"1008796\" SetNo=\"222\" TripNo=\"4\" SecondsTo=\"787\" TimeTo=\"13:00\" Location=\"Between Kings Cross St. Pancras and Highbury &amp; Isl\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:31\" DepartInterval=\"787\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6362\" LN=\"V\" />\r\n      <T LCID=\"1009557\" SetNo=\"241\" TripNo=\"2\" SecondsTo=\"981\" TimeTo=\"16:00\" Location=\"At Euston\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:10\" DepartInterval=\"981\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6424\" LN=\"V\" />\r\n      <T LCID=\"1006756\" SetNo=\"206\" TripNo=\"4\" SecondsTo=\"1076\" TimeTo=\"18:00\" Location=\"At Warren Street\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:01\" DepartInterval=\"1076\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6474\" LN=\"V\" />\r\n      <T LCID=\"1009597\" SetNo=\"242\" TripNo=\"2\" SecondsTo=\"1222\" TimeTo=\"20:00\" Location=\"Between Green Park and Oxford Circus\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:21\" DepartInterval=\"1222\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6564\" LN=\"V\" />\r\n      <T LCID=\"1008929\" SetNo=\"224\" TripNo=\"4\" SecondsTo=\"1327\" TimeTo=\"22:00\" Location=\"Approaching Green Park\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:31\" DepartInterval=\"1327\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6584\" LN=\"V\" />\r\n      <T LCID=\"1009610\" SetNo=\"243\" TripNo=\"2\" SecondsTo=\"1449\" TimeTo=\"24:00\" Location=\"At Victoria\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:31\" DepartInterval=\"1449\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6628\" LN=\"V\" />\r\n      <T LCID=\"1009630\" SetNo=\"244\" TripNo=\"2\" SecondsTo=\"1673\" TimeTo=\"28:00\" Location=\"Approaching Vauxhall\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:21\" DepartInterval=\"1673\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6734\" LN=\"V\" />\r\n      <T LCID=\"1008999\" SetNo=\"225\" TripNo=\"4\" SecondsTo=\"1785\" TimeTo=\"30:00\" Location=\"At Stockwell\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"8:06:06\" DepartInterval=\"1785\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6774\" LN=\"V\" />\r\n    </P>\r\n  </S>\r\n</ROOT>"
+                }
+            }
+        }
+    ]
+}

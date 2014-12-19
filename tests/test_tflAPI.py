@@ -25,7 +25,6 @@ class TestTFLapiByURL(unittest.TestCase):
 			self.assertEqual(detail.station, "OXC")
 			self.assertEqual(detail.line, "B")
 
-
 	def test_VerifyPlatformsQuantities(self):
 		#camden town has 4 northern line platforms
 		with my_vcr.use_cassette('Detail-CTN-N.json'):
@@ -51,7 +50,7 @@ class TestTFLapiByURL(unittest.TestCase):
 
 	def test_VerifyTrainsOnPlatforms(self):
 		#need testcase for no trains on platforms
-		with my_vcr.use_cassette('Detail-OXC-B.json'):
+		with my_vcr.use_cassette('Detail-OXC-B(TrainCode).json'):
 			detail = self.api.getDetailed(station="OXC", line="B")
 			self.assertIsInstance(detail.platforms[0].trains, list)
 
