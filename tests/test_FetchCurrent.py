@@ -1,6 +1,6 @@
 import unittest
 from tflTube import TFL
-from tflTube import TFLLine, TFLStation, TFLStationLinePlatform, TFLPlatform
+from tflTube import TFLLine, TFLStation, TFLStationLinePlatform, TFLPlatform, TFLTrain
 
 import vcr
 
@@ -15,6 +15,32 @@ import logging
 logging.basicConfig() # you need to initialize logging, otherwise you will not see anything from vcrpy
 vcr_log = logging.getLogger("vcr")
 vcr_log.setLevel(logging.DEBUG)
+
+class TestFriendlyTrainsAccess(unittest.TestCase):
+	def setUp(self):
+		self.tfl = TFL()
+	
+	def test_GetAllTrainsLineStation(self):
+		with my_vcr.use_cassette('Detail-OXC-B.json'):
+			trains = self.tfl.map.get(linecode="B", stationcode="OXC").getAllTrains()
+			self.assertIsInstance( trains, dict )
+			self.assertIsInstance( trains[trains.keys()[0]], TFLTrain)
+			self.assertEqual( len(trains), 16)
+
+		
+	def test_GetAllTrainsLine(self):
+		pass
+		'''
+		with my_vcr.use_cassette('Detail-OXC-B.json'):
+			trains = self.tfl.map.get(linecode="B").getAllTrains()
+		'''
+	def test_GetAllTrainsStation(self):
+		pass
+		'''
+		with my_vcr.use_cassette('Detail-OXC-B.json'):
+			trains = self.tfl.map.get(stationcode="OXC").getAllTrains()
+		'''
+
 
 class TestTFLPlatforms(unittest.TestCase):
 	def setUp(self):
@@ -40,6 +66,8 @@ class TestTFLTrains(unittest.TestCase):
 			self.assertIsInstance( first_platform.trains, dict)
 
 			first_train = first_platform.trains[first_platform.trains.keys()[0]]
+			self.assertIsInstance( first_train, TFLTrain )
+
 			second_train = first_platform.trains[first_platform.trains.keys()[1]]
 			self.assertEqual( first_train.leadingcar_id, "1009467" )
 			self.assertEqual( second_train.destination, "Queen's Park")

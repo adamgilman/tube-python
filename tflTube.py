@@ -140,6 +140,13 @@ class TFLStationLinePlatform(object):
 			newP.next_train = p.track_code
 			self.platforms[newP.name] = newP
 
+	def getAllTrains(self):
+		ret = {}
+		for plat in self.platforms.keys():
+			ret.update(self.platforms[plat].trains)
+		return ret
+
+
 class TFLStation(object):
 	def __init__(self, code, name):
 		self.code 		= code
