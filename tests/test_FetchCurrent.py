@@ -29,11 +29,10 @@ class TestFriendlyTrainsAccess(unittest.TestCase):
 
 		
 	def test_GetAllTrainsLine(self):
-		pass
-		'''
-		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			trains = self.tfl.map.get(linecode="B").getAllTrains()
-		'''
+		with my_vcr.use_cassette('Detail-Friendly-GetAll.json'):
+			trains = self.tfl.map.get(linecode="V").getAllTrains()
+			self.assertIsInstance( trains, dict )
+		
 	def test_GetAllTrainsStation(self):
 		pass
 		'''

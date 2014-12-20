@@ -4,6 +4,7 @@ You shouldn't reference this directly in your code as
 there is minimal type checking and exception handling
 '''
 import requests, xmltodict
+from collections import OrderedDict
 
 class TFLapi(object):
 
@@ -62,12 +63,20 @@ class DetailPlatform(object):
 	def _processTrains(self):
 		trains = self.xmlDict['T']
 		for t in trains:
-			self.trains.append( DetailTrain(t) )
+			try:
+				self.trains.append( DetailTrain(t) )
+			except:
+				#TODO: May be dropping a train on the floor here
+				pass
+
 
 class DetailTrain(object):
 	def __init__(self, xmlDict):
-		self.xmlDict = xmlDict
-		self.leadingcar_id = xmlDict["@LCID"]
+		if (type(xmlDict) is not OrderedDict):
+			raise Exception("xmlDict does not contain a train")
+		self.xmlDict = xmlDict 
+		#'true' if True else 'false'
+		self.leadingcar_id = xmlDict["@LCID"] 
 		self.set_number = xmlDict['@SetNo']
 		self.trip_number = xmlDict['@TripNo']
 		self.arrival_seconds = xmlDict['@SecondsTo']

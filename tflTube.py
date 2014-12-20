@@ -70,6 +70,7 @@ class TFLTubeMap(object):
 
 class TFLTrain(object):
 	def __init__(self):
+		self.line = None
 		self.leadingcar_id = None
 		self.set_number = None
 		self.trip_number = None
@@ -84,8 +85,11 @@ class TFLTrain(object):
 		self.direction = None
 		self.track_code = None
 
+	def __repr__(self):
+		return "<tflTube.TFLTrain LCID(%s) on %s at %s>" % (self.leadingcar_id, self.line.name + " Line", self.current_location)
+
 class TFLPlatform(object):
-	def __init__(self, api, detailPlatform):
+	def __init__(self, api, detailPlatform, line):
 		self.api = api 
 		self._detailPlatform = detailPlatform
 		self.name = None
@@ -93,16 +97,18 @@ class TFLPlatform(object):
 		self.track_code = None
 		self.next_train = None
 		self.trains	= {}
+		self.line = line
 
 		self._getTrains()
 
 	def _getTrains(self):
 		detailTrains = self._detailPlatform.trains
-		self._loadTrainFromDetail(detailTrains)
+		self._loadTrainFromDetail(detailTrains, self.line)
 
-	def _loadTrainFromDetail(self, detailTrains):
+	def _loadTrainFromDetail(self, detailTrains, line):
 		for d in detailTrains:
 			newT = TFLTrain()
+			newT.line = line
 			newT.leadingcar_id = d.leadingcar_id
 			newT.set_number = d.set_number
 			newT.trip_number = d.trip_number
@@ -133,7 +139,7 @@ class TFLStationLinePlatform(object):
 
 	def _loadPlatformsFromDetail(self, detailPlatforms):
 		for p in detailPlatforms:
-			newP = TFLPlatform(self.api, p)
+			newP = TFLPlatform(self.api, p, self.line)
 			newP.name = p.name
 			newP.platform_number = p.platform_number
 			newP.track_code = p.platform_number
@@ -171,6 +177,13 @@ class TFLLine(object):
 
 	def __repr__(self):
 		return "<tflTube.TFLLine: %s>" % self.name
+
+	def getAllTrains(self):
+		ret = {}
+		for stat in self._stations:
+			tfl = TFL()
+			ret.update( tfl.map.get(linecode=self.code, stationcode=stat).getAllTrains() )
+		return ret
 
 class TFLLineManager(dict):
 	def __init__(self):
