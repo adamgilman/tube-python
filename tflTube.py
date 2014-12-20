@@ -101,6 +101,9 @@ class TFLPlatform(object):
 
 		self._getTrains()
 
+	def __repr__(self):
+		return "<tflTube.TFLPlatform: %s %s >" % (self.line.name, self.name)
+
 	def _getTrains(self):
 		detailTrains = self._detailPlatform.trains
 		self._loadTrainFromDetail(detailTrains, self.line)
@@ -162,6 +165,9 @@ class TFLStation(object):
 	def __repr__(self):
 		return "<tflTube.TFLStation: %s>" % self.name
 
+	def getLines(self):
+		return self._lines
+
 	def getAllTrains(self):
 		ret = {}
 		for l in self._lines:
@@ -184,6 +190,9 @@ class TFLLine(object):
 
 	def __repr__(self):
 		return "<tflTube.TFLLine: %s>" % self.name
+
+	def getStations(self):
+		return self._stations
 
 	def getAllTrains(self):
 		ret = {}
