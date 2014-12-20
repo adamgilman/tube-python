@@ -162,6 +162,13 @@ class TFLStation(object):
 	def __repr__(self):
 		return "<tflTube.TFLStation: %s>" % self.name
 
+	def getAllTrains(self):
+		ret = {}
+		for l in self._lines:
+			ret.update( trains = TFL().map.get(linecode=l, stationcode=self.code).getAllTrains() )
+		return ret
+
+
 class TFLStationManager(dict):
 	def __init__(self):
 		pass

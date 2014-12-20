@@ -34,11 +34,8 @@ class TestFriendlyTrainsAccess(unittest.TestCase):
 			self.assertIsInstance( trains, dict )
 		
 	def test_GetAllTrainsStation(self):
-		pass
-		'''
-		with my_vcr.use_cassette('Detail-OXC-B.json'):
+		with my_vcr.use_cassette('Detail-Friendly-GetAll-Station.json'):
 			trains = self.tfl.map.get(stationcode="OXC").getAllTrains()
-		'''
 
 
 class TestTFLPlatforms(unittest.TestCase):

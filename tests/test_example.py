@@ -21,7 +21,7 @@ def test_LinesStationMapping():
 	>>> tfl.map.get(linecode='V')
 	<tflTube.TFLLine: Victoria>
 	
-	#>>> tfl.map.get(linecode='V').stations
+	>>> tfl.map.get(linecode='V').stations
 	#{'VIC': <tflTube.TFLStation: Victoria>, 'WAL': <tflTube.TFLStation: Walthamstow Central>, 'PIM': <tflTube.TFLStation: Pimlico>, 'GPK': <tflTube.TFLStation: Green Park>, 'WST': <tflTube.TFLStation: Warren Street>, 'BRX': <tflTube.TFLStation: Brixton>, 'FPK': <tflTube.TFLStation: Finsbury Park>, 'STK': <tflTube.TFLStation: Stockwell>, 'KXX': <tflTube.TFLStation: King's Cross St Pancras>, 'TTH': <tflTube.TFLStation: Tottenham Hale>, 'HBY': <tflTube.TFLStation: Highbury and Islington>, 'VUX': <tflTube.TFLStation: Vauxhall>, 'BHR': <tflTube.TFLStation: Blackhorse Road>, 'SVS': <tflTube.TFLStation: Seven Sisters>, 'EUS': <tflTube.TFLStation: Euston>, 'OXC': <tflTube.TFLStation: Oxford Circus>}
 
 	'''
@@ -44,8 +44,8 @@ def test_GetPlatformsAvailableAtStationsOnLine():
 	>>> baker
 	<tflTube.TFLLine: Bakerloo>
 	
-	#>>> tfl.getPlatforms(oxc, baker)
-	#[<tflTube.TFLPlatform: Southbound - Platform 3>, <tflTube.TFLPlatform: Northbound - Platform 4>]
+	>>> tfl.map.get(linecode="B", stationcode="OXC").platforms
+	[<tflTube.TFLPlatform: Southbound - Platform 3>, <tflTube.TFLPlatform: Northbound - Platform 4>]
 	'''
 	pass
 
