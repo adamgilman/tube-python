@@ -1,6 +1,7 @@
 import unittest
-from tflTube import TFL
-from tflTube import TFLLine, TFLStation, TFLStationLinePlatform, TFLPlatform, TFLTrain
+from tubeAPI import Tube
+from tubeAPI import TubeLine, TubeStation, TubeStationLinePlatform
+from tubeAPI import TubePlatform, TubeTrain
 
 import vcr
 
@@ -18,86 +19,86 @@ vcr_log.setLevel(logging.DEBUG)
 
 class TestFriendlyTrainsAccess(unittest.TestCase):
 	def setUp(self):
-		self.tfl = TFL()
+		self.tube = Tube()
 	
 	def test_GetAllTrainsLineStation(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			trains = self.tfl.map.get(linecode="B", stationcode="OXC").getAllTrains()
+			trains = self.tube.map.get(linecode="B", stationcode="OXC").getAllTrains()
 			self.assertIsInstance( trains, dict )
-			self.assertIsInstance( trains[trains.keys()[0]], TFLTrain)
+			self.assertIsInstance( trains[trains.keys()[0]], TubeTrain)
 			self.assertEqual( len(trains), 16)
 
 		
 	def test_GetAllTrainsLine(self):
 		with my_vcr.use_cassette('Detail-Friendly-GetAll.json'):
-			trains = self.tfl.map.get(linecode="V").getAllTrains()
+			trains = self.tube.map.get(linecode="V").getAllTrains()
 			self.assertIsInstance( trains, dict )
 		
 	def test_GetAllTrainsStation(self):
 		with my_vcr.use_cassette('Detail-Friendly-GetAll-Station.json'):
-			trains = self.tfl.map.get(stationcode="OXC").getAllTrains()
+			trains = self.tube.map.get(stationcode="OXC").getAllTrains()
 
 
-class TestTFLPlatforms(unittest.TestCase):
+class TestTubePlatforms(unittest.TestCase):
 	def setUp(self):
-		self.tfl = TFL()
-		self.current = self.tfl.map
+		self.tube = Tube()
+		self.current = self.tube.map
 
 	def test_GetPlatformsAtStationLine(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			platforms = self.tfl.map.get(linecode="B", stationcode="OXC").platforms
+			platforms = self.tube.map.get(linecode="B", stationcode="OXC").platforms
 			self.assertIsInstance( platforms, dict)
 
 			first_platform = platforms[platforms.keys()[0]]
-			self.assertIsInstance( first_platform, TFLPlatform)
+			self.assertIsInstance( first_platform, TubePlatform)
 			self.assertEqual( first_platform.name, "Northbound - Platform 4")
 
-class TestTFLTrains(unittest.TestCase):
+class TestTubeTrains(unittest.TestCase):
 	def setUp(self):
-		self.tfl = TFL()
+		self.tube = Tube()
 	def test_GetTrainsOnPlatform(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			platforms = self.tfl.map.get(linecode="B", stationcode="OXC").platforms
+			platforms = self.tube.map.get(linecode="B", stationcode="OXC").platforms
 			first_platform = platforms[platforms.keys()[0]]
 			self.assertIsInstance( first_platform.trains, dict)
 
 			first_train = first_platform.trains[first_platform.trains.keys()[0]]
-			self.assertIsInstance( first_train, TFLTrain )
+			self.assertIsInstance( first_train, TubeTrain )
 
 			second_train = first_platform.trains[first_platform.trains.keys()[1]]
 			self.assertEqual( first_train.leadingcar_id, "1009467" )
 			self.assertEqual( second_train.destination, "Queen's Park")
 
 
-class TestTFLTubeMap(unittest.TestCase):
+class TestTubeMap(unittest.TestCase):
 	def setUp(self):
-		self.tfl = TFL()
-		self.current = self.tfl.map
+		self.tube = Tube()
+		self.current = self.tube.map
 
 	def test_GetStation(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			self.assertIsInstance(self.tfl.map.get(stationcode="OXC"), TFLStation)
-			self.assertIsNone(self.tfl.map.get(stationcode="XXX"))
-			self.assertIsNone(self.tfl.map.get())
+			self.assertIsInstance(self.tube.map.get(stationcode="OXC"), TubeStation)
+			self.assertIsNone(self.tube.map.get(stationcode="XXX"))
+			self.assertIsNone(self.tube.map.get())
 
 	def test_GetLine(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			self.assertIsInstance(self.tfl.map.get(linecode="B"), TFLLine)
-			self.assertIsNone(self.tfl.map.get(linecode="X"))
-			self.assertIsNone(self.tfl.map.get())
+			self.assertIsInstance(self.tube.map.get(linecode="B"), TubeLine)
+			self.assertIsNone(self.tube.map.get(linecode="X"))
+			self.assertIsNone(self.tube.map.get())
 
 	def test_GetStationLine(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			self.assertIsInstance(self.tfl.map.get(linecode="B", stationcode="OXC"), TFLStationLinePlatform)
+			self.assertIsInstance(self.tube.map.get(linecode="B", stationcode="OXC"), TubeStationLinePlatform)
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			self.assertIsInstance(self.tfl.map.get(linecode="B", stationcode="OXC").station, TFLStation)
+			self.assertIsInstance(self.tube.map.get(linecode="B", stationcode="OXC").station, TubeStation)
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			self.assertEqual(self.tfl.map.get(linecode="B", stationcode="OXC").station.code, "OXC")
+			self.assertEqual(self.tube.map.get(linecode="B", stationcode="OXC").station.code, "OXC")
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			self.assertIsInstance(self.tfl.map.get(linecode="B", stationcode="OXC").line, TFLLine)
+			self.assertIsInstance(self.tube.map.get(linecode="B", stationcode="OXC").line, TubeLine)
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
-			self.assertEqual(self.tfl.map.get(linecode="B", stationcode="OXC").line.code, "B")
+			self.assertEqual(self.tube.map.get(linecode="B", stationcode="OXC").line.code, "B")
 
 	def test_FailGetStationLine(self):
 		#district line does not go through OXC
-		self.assertIsNone(self.tfl.map.get(linecode="D", stationcode="OXC"))
+		self.assertIsNone(self.tube.map.get(linecode="D", stationcode="OXC"))

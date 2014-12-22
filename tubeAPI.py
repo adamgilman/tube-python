@@ -2,19 +2,18 @@ import requests, logging
 from tflAPI import TFLapi
 
 
-class TFL(object):
+class Tube(object):
 	def __init__(self):
 		logging.getLogger("requests").setLevel(logging.WARNING)
 		self.api = TFLapi()
-		self.map = TFLTubeMap(self.api)
+		self.map = TubeMap(self.api)
 	
-class TFLTubeMap(object):
+class TubeMap(object):
 	def __init__(self, api):
-		self.api = api
 		from tflStationNames import stations, lineStations
-
-		linesList = [TFLLine("C", "Central"), TFLLine("B", "Bakerloo"), TFLLine("D", "District"), TFLLine("H", "Hammersmith & Circle"), TFLLine("J", "Jubilee"), TFLLine("M", "Metropolitan"), TFLLine("N", "Nothern"), TFLLine("P", "Piccadilly"), TFLLine("W", "Waterloo & City"), TFLLine("V", "Victoria")]
-		stationsList = [TFLStation(code, name) for code, name in stations.iteritems()]
+		self.api = api
+		linesList = [TubeLine("C", "Central"), TubeLine("B", "Bakerloo"), TubeLine("D", "District"), TubeLine("H", "Hammersmith & Circle"), TubeLine("J", "Jubilee"), TubeLine("M", "Metropolitan"), TubeLine("N", "Nothern"), TubeLine("P", "Piccadilly"), TubeLine("W", "Waterloo & City"), TubeLine("V", "Victoria")]
+		stationsList = [TubeStation(code, name) for code, name in stations.iteritems()]
 
 		lines = {} #TODO: rewrite by comprehension
 		for line in linesList:
@@ -34,8 +33,8 @@ class TFLTubeMap(object):
 				lines[lcode]._stations.addStation(station)
 
 		#stations are mapped to lines, create root managers
-		self._lines 		= TFLLineManager()
-		self._stations	= TFLStationManager()
+		self._lines 		= TubeLineManager()
+		self._stations	= TubeStationManager()
 
 		self._lines.update(lines)
 		self._stations.update(stations)
@@ -64,11 +63,11 @@ class TFLTubeMap(object):
 			#check if station is on line
 			if linecode not in self._stations[stationcode]._lines.keys():
 				return None
-			return TFLStationLinePlatform(	self._stations[stationcode], 
+			return TubeStationLinePlatform(	self._stations[stationcode], 
 											self._lines[linecode],
 											self.api)
 
-class TFLTrain(object):
+class TubeTrain(object):
 	def __init__(self):
 		self.line = None
 		self.leadingcar_id = None
@@ -86,9 +85,9 @@ class TFLTrain(object):
 		self.track_code = None
 
 	def __repr__(self):
-		return "<tflTube.TFLTrain LCID(%s) on %s at %s>" % (self.leadingcar_id, self.line.name + " Line", self.current_location)
+		return "<tflTube.Train LCID(%s) on %s at %s>" % (self.leadingcar_id, self.line.name + " Line", self.current_location)
 
-class TFLPlatform(object):
+class TubePlatform(object):
 	def __init__(self, api, detailPlatform, line):
 		self.api = api 
 		self._detailPlatform = detailPlatform
@@ -102,7 +101,7 @@ class TFLPlatform(object):
 		self._getTrains()
 
 	def __repr__(self):
-		return "<tflTube.TFLPlatform: %s %s >" % (self.line.name, self.name)
+		return "<tflTube.Platform: %s %s >" % (self.line.name, self.name)
 
 	def _getTrains(self):
 		detailTrains = self._detailPlatform.trains
@@ -110,7 +109,7 @@ class TFLPlatform(object):
 
 	def _loadTrainFromDetail(self, detailTrains, line):
 		for d in detailTrains:
-			newT = TFLTrain()
+			newT = TubeTrain()
 			newT.line = line
 			newT.leadingcar_id = d.leadingcar_id
 			newT.set_number = d.set_number
@@ -127,7 +126,7 @@ class TFLPlatform(object):
 			newT.track_code = d.track_code
 			self.trains[newT.leadingcar_id] = newT
 
-class TFLStationLinePlatform(object):
+class TubeStationLinePlatform(object):
 	def __init__(self, station, line, api):
 		self.api 		= api
 		self.station 	= station
@@ -142,7 +141,7 @@ class TFLStationLinePlatform(object):
 
 	def _loadPlatformsFromDetail(self, detailPlatforms):
 		for p in detailPlatforms:
-			newP = TFLPlatform(self.api, p, self.line)
+			newP = TubePlatform(self.api, p, self.line)
 			newP.name = p.name
 			newP.platform_number = p.platform_number
 			newP.track_code = p.platform_number
@@ -156,14 +155,14 @@ class TFLStationLinePlatform(object):
 		return ret
 
 
-class TFLStation(object):
+class TubeStation(object):
 	def __init__(self, code, name):
 		self.code 		= code
 		self.name 		= name
-		self._lines 	= TFLLineManager()
+		self._lines 	= TubeLineManager()
 
 	def __repr__(self):
-		return "<tflTube.TFLStation: %s>" % self.name
+		return "<tflTube.Station: %s>" % self.name
 
 	def getLines(self):
 		return self._lines
@@ -171,25 +170,25 @@ class TFLStation(object):
 	def getAllTrains(self):
 		ret = {}
 		for l in self._lines:
-			ret.update( trains = TFL().map.get(linecode=l, stationcode=self.code).getAllTrains() )
+			ret.update( trains = Tube().map.get(linecode=l, stationcode=self.code).getAllTrains() )
 		return ret
 
 
-class TFLStationManager(dict):
+class TubeStationManager(dict):
 	def __init__(self):
 		pass
 	def addStation(self, station):
 		if not self.has_key(station.code):
 			self[station.code] = station
 
-class TFLLine(object):
+class TubeLine(object):
 	def __init__(self, code, name):
 		self.code 		= code
 		self.name 		= name
-		self._stations 	= TFLStationManager()
+		self._stations 	= TubeStationManager()
 
 	def __repr__(self):
-		return "<tflTube.TFLLine: %s>" % self.name
+		return "<tflTube.Line: %s>" % self.name
 
 	def getStations(self):
 		return self._stations
@@ -197,11 +196,11 @@ class TFLLine(object):
 	def getAllTrains(self):
 		ret = {}
 		for stat in self._stations:
-			tfl = TFL()
+			tfl = Tube()
 			ret.update( tfl.map.get(linecode=self.code, stationcode=stat).getAllTrains() )
 		return ret
 
-class TFLLineManager(dict):
+class TubeLineManager(dict):
 	def __init__(self):
 		pass			
 	def addLine(self, line):
