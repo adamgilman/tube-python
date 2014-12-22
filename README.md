@@ -9,9 +9,15 @@ Python object wrapper for TfL (Transport for London) TrackerNet information serv
 ### Pythonic Tube Map
 Explore the underground via a map of Python objects for each station and lines interlinked via the actual tube representation.
 
+```
+
+pip install tube
+
+```
+
 ```python
 
-	>>> from tubeAPI import Tube
+	>>> from tube import Tube
 	>>> tube = Tube()
 	>>> tube.map.get(linecode='V')
 	<Tube.Line: Victoria>

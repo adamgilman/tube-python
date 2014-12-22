@@ -1,5 +1,5 @@
 import unittest
-from tflAPI import TFLapi
+from tube.tflAPI import TFLapi
 import vcr
 
 my_vcr = vcr.VCR(

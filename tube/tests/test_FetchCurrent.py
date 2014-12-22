@@ -1,7 +1,7 @@
 import unittest
-from tubeAPI import Tube
-from tubeAPI import TubeLine, TubeStation, TubeStationLinePlatform
-from tubeAPI import TubePlatform, TubeTrain
+from tube.tubeAPI import Tube
+from tube.tubeAPI import TubeLine, TubeStation, TubeStationLinePlatform
+from tube.tubeAPI import TubePlatform, TubeTrain
 
 import vcr
 
