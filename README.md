@@ -3,7 +3,7 @@ tube-python
 
 Python object wrapper for TfL (Transport for London) TrackerNet information service
 
-[![Build Status](https://travis-ci.org/adamgilman/tfl-tube-python.svg?branch=master)](https://travis-ci.org/adamgilman/tfl-tube-python)
+[![Build Status](https://travis-ci.org/adamgilman/tube-python.svg?branch=master)](https://travis-ci.org/adamgilman/tube-python)
 
 # Usage
 ### Pythonic Tube Map
@@ -30,7 +30,7 @@ Explore the underground via a map of Python objects for each station and lines i
 ### Train Predication Service 
 See every train scheduled to arrive at every platform, station or line.
 
-```
+```python
 
 	>>> tube.map.get(linecode="B", stationcode="OXC").platforms
 	{u'Northbound - Platform 4': <Tube.Platform: Bakerloo Northbound - Platform 4 >, u'Southbound - Platform 3': <Tube.Platform: Bakerloo Southbound - Platform 3 >}
