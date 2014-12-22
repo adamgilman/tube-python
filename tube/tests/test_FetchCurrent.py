@@ -26,7 +26,7 @@ class TestFriendlyTrainsAccess(unittest.TestCase):
 			trains = self.tube.map.get(linecode="B", stationcode="OXC").getAllTrains()
 			self.assertIsInstance( trains, dict )
 			self.assertIsInstance( trains[trains.keys()[0]], TubeTrain)
-			self.assertEqual( len(trains), 16)
+			self.assertEqual( len(trains), 14)
 
 		
 	def test_GetAllTrainsLine(self):
@@ -66,7 +66,7 @@ class TestTubeTrains(unittest.TestCase):
 			self.assertIsInstance( first_train, TubeTrain )
 
 			second_train = first_platform.trains[first_platform.trains.keys()[1]]
-			self.assertEqual( first_train.leadingcar_id, "1009467" )
+			self.assertEqual( first_train.leadingcar_id, "1030276" )
 			self.assertEqual( second_train.destination, "Queen's Park")
 
 
