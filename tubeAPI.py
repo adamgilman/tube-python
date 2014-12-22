@@ -85,7 +85,7 @@ class TubeTrain(object):
 		self.track_code = None
 
 	def __repr__(self):
-		return "<tflTube.Train LCID(%s) on %s at %s>" % (self.leadingcar_id, self.line.name + " Line", self.current_location)
+		return "<Tube.Train LCID(%s) on %s at %s>" % (self.leadingcar_id, self.line.name + " Line", self.current_location)
 
 class TubePlatform(object):
 	def __init__(self, api, detailPlatform, line):
@@ -101,7 +101,7 @@ class TubePlatform(object):
 		self._getTrains()
 
 	def __repr__(self):
-		return "<tflTube.Platform: %s %s >" % (self.line.name, self.name)
+		return "<Tube.Platform: %s %s >" % (self.line.name, self.name)
 
 	def _getTrains(self):
 		detailTrains = self._detailPlatform.trains
@@ -162,7 +162,7 @@ class TubeStation(object):
 		self._lines 	= TubeLineManager()
 
 	def __repr__(self):
-		return "<tflTube.Station: %s>" % self.name
+		return "<Tube.Station: %s>" % self.name
 
 	def getLines(self):
 		return self._lines
@@ -188,7 +188,7 @@ class TubeLine(object):
 		self._stations 	= TubeStationManager()
 
 	def __repr__(self):
-		return "<tflTube.Line: %s>" % self.name
+		return "<Tube.Line: %s>" % self.name
 
 	def getStations(self):
 		return self._stations
