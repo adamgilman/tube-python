@@ -170,7 +170,7 @@ class TubeStation(object):
 	def getAllTrains(self):
 		ret = {}
 		for l in self._lines:
-			ret.update( trains = Tube().map.get(linecode=l, stationcode=self.code).getAllTrains() )
+			ret.update(Tube().map.get(linecode=l, stationcode=self.code).getAllTrains() )
 		return ret
 
 
