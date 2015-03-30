@@ -78,14 +78,14 @@ class TestTubeMap(unittest.TestCase):
 	def test_GetStation(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
 			self.assertIsInstance(self.tube.map.get(stationcode="OXC"), TubeStation)
-			self.assertIsNone(self.tube.map.get(stationcode="XXX"))
-			self.assertIsNone(self.tube.map.get())
+			self.assertRaises(self.tube.map.get, stationcode="XXX")
+			self.assertRaises(self.tube.map.get)
 
 	def test_GetLine(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):
 			self.assertIsInstance(self.tube.map.get(linecode="B"), TubeLine)
-			self.assertIsNone(self.tube.map.get(linecode="X"))
-			self.assertIsNone(self.tube.map.get())
+			self.assertRaises(self.tube.map.get, linecode="XXX")
+			self.assertRaises(self.tube.map.get)
 
 	def test_GetStationLine(self):
 		with my_vcr.use_cassette('Detail-OXC-B.json'):

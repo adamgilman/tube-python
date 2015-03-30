@@ -90,6 +90,7 @@ class TubeMap(object):
 			return TubeStationLinePlatform(	self._stations[stationcode], 
 											self._lines[linecode],
 											self._api)
+		raise KeyError("stationcode or linecode does not exist, refer to allLines or allStations for valid codes")
 
 class TubeTrain(object):
 	def __init__(self):
