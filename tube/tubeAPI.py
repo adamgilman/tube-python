@@ -3,15 +3,30 @@ from tflAPI import TFLapi
 
 
 class Tube(object):
+	'''Root Tube object. Explore the underground with the .map object'''
 	def __init__(self):
 		logging.getLogger("requests").setLevel(logging.WARNING)
 		self.api = TFLapi()
 		self.map = TubeMap(self.api)
-	
+
 class TubeMap(object):
+	'''Object representation of the underground
+			access single stations or line with .get
+				.get(stationcode='OXC')
+				.get(linecode='V')
+			get all lines and stations with .all*
+				.allLines()
+				.allStations()
+
+			get associated lines with stations via property
+				.get(stationcode='OXC').getLines()
+
+			get associated stations with lines via property
+				.get(linecode='V').getStations()
+	'''
 	def __init__(self, api):
 		from tflStationNames import stations, lineStations
-		self.api = api
+		self._api = api
 		linesList = [TubeLine("C", "Central"), TubeLine("B", "Bakerloo"), TubeLine("D", "District"), TubeLine("H", "Hammersmith & Circle"), TubeLine("J", "Jubilee"), TubeLine("M", "Metropolitan"), TubeLine("N", "Nothern"), TubeLine("P", "Piccadilly"), TubeLine("W", "Waterloo & City"), TubeLine("V", "Victoria")]
 		stationsList = [TubeStation(code, name) for code, name in stations.iteritems()]
 
@@ -33,7 +48,7 @@ class TubeMap(object):
 				lines[lcode]._stations.addStation(station)
 
 		#stations are mapped to lines, create root managers
-		self._lines 		= TubeLineManager()
+		self._lines 	= TubeLineManager()
 		self._stations	= TubeStationManager()
 
 		self._lines.update(lines)
@@ -51,6 +66,15 @@ class TubeMap(object):
 		else:
 			return None
 		
+	def allStations(self):
+		return self._stations
+
+	def allLines(self):
+		return self._lines
+
+	def getStation(self, stationcode=None): return self.get(stationcode=stationcode)
+	def getLine(self, linecode=None): return self.get(linecode=linecode)
+
 	def get(self, stationcode=None, linecode=None):
 		#valid station but, not line
 		if (self._validstationcode(stationcode)) and not (self._validlinecode(linecode)):
@@ -65,7 +89,7 @@ class TubeMap(object):
 				return None
 			return TubeStationLinePlatform(	self._stations[stationcode], 
 											self._lines[linecode],
-											self.api)
+											self._api)
 
 class TubeTrain(object):
 	def __init__(self):
