@@ -45,38 +45,45 @@ class APIDetail(object):
 	def _processPlatforms(self):
 		platforms = self.xmlDict['ROOT']['S']['P']
 		for plat in platforms:
-			self.platforms.append( DetailPlatform(plat) )		
+			self.platforms.append( DetailPlatform(plat) )
 
 
 class DetailPlatform(object):
 	def __init__(self, xmlDict):
-		self.xmlDict = xmlDict
-		self.name = xmlDict['@N']
-		self.platform_number = xmlDict['@Num']
-		self.track_code = xmlDict['@TrackCode']
-		self.next_train = xmlDict['@NextTrain']
-
 		self.trains = []
-		self._processTrains()
+		self.name = None
+		self.platform_number = None
+		self.track_code = None
+		self.next_train = None
+		
+		self.xmlDict = xmlDict
+		if type(xmlDict) is OrderedDict:
+			self.name = xmlDict['@N']
+			self.platform_number = xmlDict['@Num']
+			self.track_code = xmlDict['@TrackCode']
+			self.next_train = xmlDict['@NextTrain']
+
+			self._processTrains()
 
 
 	def _processTrains(self):
-		trains = self.xmlDict['T']
-		for t in trains:
-			try:
-				self.trains.append( DetailTrain(t) )
-			except:
-				#TODO: May be dropping a train on the floor here
-				pass
+		if self.xmlDict.has_key('T'):
+			trains = self.xmlDict['T']
+			for t in trains:
+				try:
+					self.trains.append( DetailTrain(t) )
+				except:
+					#TODO: May be dropping a train on the floor here
+					pass
 
 
 class DetailTrain(object):
 	def __init__(self, xmlDict):
 		if (type(xmlDict) is not OrderedDict):
 			raise Exception("xmlDict does not contain a train")
-		self.xmlDict = xmlDict 
+		self.xmlDict = xmlDict
 		#'true' if True else 'false'
-		self.leadingcar_id = xmlDict["@LCID"] 
+		self.leadingcar_id = xmlDict["@LCID"]
 		self.set_number = xmlDict['@SetNo']
 		self.trip_number = xmlDict['@TripNo']
 		self.arrival_seconds = xmlDict['@SecondsTo']
@@ -89,8 +96,3 @@ class DetailTrain(object):
 		self.departed_current_station = xmlDict['@Departed']
 		self.direction = xmlDict['@Direction']
 		self.track_code = xmlDict['@TrackCode']
-
-
-
-
-

@@ -6,8 +6,20 @@ class Tube(object):
 	'''Root Tube object. Explore the underground with the .map object'''
 	def __init__(self):
 		logging.getLogger("requests").setLevel(logging.WARNING)
-		self.api = TFLapi()
-		self.map = TubeMap(self.api)
+		self._api = TFLapi()
+		self.map = TubeMap(self._api)
+
+	def getAllTrainsForStation(self, station):
+		if type(station) is TubeStation:
+			station = station.code
+		trains = self.map.get(stationcode=station).getAllTrains().values()
+		return trains
+
+	def getAllTrainsForLine(self, line):
+		if type(line) is TubeLine:
+			line = line.code
+		trains = self.map.get(linecode=line).getAllTrains().values()
+		return trains
 
 class TubeMap(object):
 	'''Object representation of the underground
@@ -44,7 +56,7 @@ class TubeMap(object):
 				station = stations[scode]
 				#add station to line
 				stations[scode]._lines.addLine(line)
-				#add line to station		
+				#add line to station
 				lines[lcode]._stations.addStation(station)
 
 		#stations are mapped to lines, create root managers
@@ -56,16 +68,16 @@ class TubeMap(object):
 
 	def _validstationcode(self, stationcode):
 		if stationcode is not None:
-			return stationcode in self._stations.keys()	
+			return stationcode in self._stations.keys()
 		else:
 			return None
 
 	def _validlinecode(self, linecode):
 		if linecode is not None:
-			return linecode in self._lines.keys()	
+			return linecode in self._lines.keys()
 		else:
 			return None
-		
+
 	def allStations(self):
 		return self._stations
 
@@ -87,7 +99,7 @@ class TubeMap(object):
 			#check if station is on line
 			if linecode not in self._stations[stationcode]._lines.keys():
 				return None
-			return TubeStationLinePlatform(	self._stations[stationcode], 
+			return TubeStationLinePlatform(	self._stations[stationcode],
 											self._lines[linecode],
 											self._api)
 		raise KeyError("stationcode or linecode does not exist, refer to allLines or allStations for valid codes")
@@ -114,7 +126,7 @@ class TubeTrain(object):
 
 class TubePlatform(object):
 	def __init__(self, api, detailPlatform, line):
-		self.api = api 
+		self.api = api
 		self._detailPlatform = detailPlatform
 		self.name = None
 		self.platform_number = None
@@ -227,8 +239,7 @@ class TubeLine(object):
 
 class TubeLineManager(dict):
 	def __init__(self):
-		pass			
+		pass
 	def addLine(self, line):
 		if not self.has_key(line.code):
 			self[line.code] = line
-

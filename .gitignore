@@ -2,6 +2,7 @@ bin/*
 include/*
 lib/*
 man/*
+share/*
 legacy/*
 
 # Byte-compiled / optimized / DLL files

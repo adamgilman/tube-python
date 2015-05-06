@@ -5,15 +5,51 @@ Python object wrapper for TfL (Transport for London) TrackerNet information serv
 
 [![Build Status](https://travis-ci.org/adamgilman/tube-python.svg?branch=master)](https://travis-ci.org/adamgilman/tube-python)
 
-# Usage
-### Pythonic Tube Map
-Explore the underground via a map of Python objects for each station and lines interlinked via the actual tube representation.
-
+# Installation
 ```
-
 pip install tube
 
 ```
+
+# Usage
+### Easy Access to Trains on the Underground
+Quickly get all trains on tube lines and near stations
+
+All trains near Kings Cross Underground Station
+
+```python
+>>> from tube import Tube
+>>> tube = Tube()
+>>> pprint( tube.getAllTrainsForStation("KXX") )
+[<Tube.Train LCID(5877211) on Metropolitan Line at Between Baker Street and Great Portland Street>,
+ <Tube.Train LCID(5584481) on Metropolitan Line at Farringdon Sidings>,
+ <Tube.Train LCID(5877791) on Metropolitan Line at Left Upton Park>,
+ <Tube.Train LCID(1198252) on Nothern Line at At Borough Platform 1>,
+ <Tube.Train LCID(5872401) on Metropolitan Line at At Liverpool Street>,
+ <Tube.Train LCID(5871481) on Piccadilly Line at At Gloucester Road Platform 5>,
+ <Tube.Train LCID(5873101) on Metropolitan Line at Approaching Mansion House>,
+ <Tube.Train LCID(1197862) on Nothern Line at Between Kennington and  Elephant and Castle>,
+ <Tube.Train LCID(5873651) on Metropolitan Line at At Aldgate East Platform 1>,...]
+```
+
+All trains on the Victoria Line
+
+```python
+>>> pprint( tube.getAllTrainsForLine("V") )
+[<Tube.Train LCID(5854901) on Victoria Line at At Euston>,
+ <Tube.Train LCID(5858511) on Victoria Line at 0>,
+ <Tube.Train LCID(3695661) on Victoria Line at Approaching Green Park>,
+ <Tube.Train LCID(5851091) on Victoria Line at Approaching Finsbury Park>,
+ <Tube.Train LCID(3739211) on Victoria Line at Between Vauxhall and Pimlico>,
+ <Tube.Train LCID(3735331) on Victoria Line at Between Stockwell and Brixton>,
+ <Tube.Train LCID(5867211) on Victoria Line at Between Tottenham Hale and Seven Sisters>,
+ <Tube.Train LCID(5813041) on Victoria Line at Between Oxford Circus and Green Park>,
+ <Tube.Train LCID(3734731) on Victoria Line at At Kings Cross St. Pancras>,
+ <Tube.Train LCID(3757771) on Victoria Line at At Victoria>,...]
+```
+
+### Fully Pythonic Tube Map
+Explore the underground via a map of Python objects for each station and lines interlinked via the actual tube representation.
 
 ```python
 
@@ -30,29 +66,7 @@ pip install tube
 	
 	>>> tube.map.get(stationcode="OXC").getLines()
 	{'C': <Tube.Line: Central>, 'B': <Tube.Line: Bakerloo>, 'V': <Tube.Line: Victoria>}
-
-
 ```
-### Train Predication Service 
-See every train scheduled to arrive at every platform, station or line.
-
-```python
-
-	>>> tube.map.get(linecode="B", stationcode="OXC").platforms
-	{u'Northbound - Platform 4': <Tube.Platform: Bakerloo Northbound - Platform 4 >, u'Southbound - Platform 3': <Tube.Platform: Bakerloo Southbound - Platform 3 >}
-
-	>>> tube.map.get(linecode="B", stationcode="OXC").getAllTrains()
-	{u'1030085': <Tube.Train LCID(1030085) on Bakerloo Line at Approaching Waterloo>, u'1031201': <Tube.Train LCID(1031201) on Bakerloo Line at Approaching Elephant & Castle>, u'1029910': <Tube.Train LCID(1029910) on Bakerloo Line at At Regents Park Platform 2>, u'1032071': <Tube.Train LCID(1032071) on Bakerloo Line at Left Embankment>, u'1029021': <Tube.Train LCID(1029021) on Bakerloo Line at Left Marylebone>, u'1031368': <Tube.Train LCID(1031368) on Bakerloo Line at Queen's Park North Sidings>, u'1029809': <Tube.Train LCID(1029809) on Bakerloo Line at Queen's Park North Sidings>, u'1030617': <Tube.Train LCID(1030617) on Bakerloo Line at Left Maida Vale>, u'1032246': <Tube.Train LCID(1032246) on Bakerloo Line at Approaching Queen's Park>, u'1029757': <Tube.Train LCID(1029757) on Bakerloo Line at Between Queen's Park and Kilburn Park>, u'1032055': <Tube.Train LCID(1032055) on Bakerloo Line at At Paddington Platform 4>, u'1031478': <Tube.Train LCID(1031478) on Bakerloo Line at At Platform>, u'1030347': <Tube.Train LCID(1030347) on Bakerloo Line at At Elephant & Castle Platform 3>, u'1029382': <Tube.Train LCID(1029382) on Bakerloo Line at At Piccadilly Circus Platform 1>, u'1029109': <Tube.Train LCID(1029109) on Bakerloo Line at At Willesden Junction Platform 1>}
-
-	>>> tube.map.get(linecode="V").getAllTrains()
-{u'1032146': <Tube.Train LCID(1032146) on Victoria Line at At Pimlico>, u'1027885': <Tube.Train LCID(1027885) on Victoria Line at At Platform>, u'1029333': <Tube.Train LCID(1029333) on Victoria Line at At Kings Cross St. Pancras>, u'1030100': <Tube.Train LCID(1030100) on Victoria Line at At Highbury & Islington>, u'1030219': <Tube.Train LCID(1030219) on Victoria Line at Between Kings Cross St. Pancras and Highbury & Isl>, u'1030324': <Tube.Train LCID(1030324) on Victoria Line at Departed Vauxhall>, u'1031638': <Tube.Train LCID(1031638) on Victoria Line at At Finsbury Park>, u'1029114': <Tube.Train LCID(1029114) on Victoria Line at At Blackhorse Road>, u'1029796': <Tube.Train LCID(1029796) on Victoria Line at Departed Warren Street>, u'1031881': <Tube.Train LCID(1031881) on Victoria Line at Between Victoria and Pimlico>, u'1029869': <Tube.Train LCID(1029869) on Victoria Line at At Brixton Platform 1>, u'1029892': <Tube.Train LCID(1029892) on Victoria Line at At Seven Sisters Platform 5>, u'1032228': <Tube.Train LCID(1032228) on Victoria Line at Between Oxford Circus and Green Park>, u'1029173': <Tube.Train LCID(1029173) on Victoria Line at Between Stockwell and Brixton>, u'1029614': <Tube.Train LCID(1029614) on Victoria Line at Between Highbury & Islington and Finsbury Park>, u'1028128': <Tube.Train LCID(1028128) on Victoria Line at At Victoria>, u'1029917': <Tube.Train LCID(1029917) on Victoria Line at Between Warren Street and Euston>, u'1030278': <Tube.Train LCID(1030278) on Victoria Line at At Platform>, u'1029515': <Tube.Train LCID(1029515) on Victoria Line at At Walthamstow Central>, u'1030241': <Tube.Train LCID(1030241) on Victoria Line at Between Finsbury Park and Seven Sisters>, u'1029235': <Tube.Train LCID(1029235) on Victoria Line at Approaching Euston>, u'1025823': <Tube.Train LCID(1025823) on Victoria Line at At Highbury & Islington>, u'1030168': <Tube.Train LCID(1030168) on Victoria Line at At Platform>, u'1030194': <Tube.Train LCID(1030194) on Victoria Line at Between Seven Sisters and Finsbury Park>, u'1029740': <Tube.Train LCID(1029740) on Victoria Line at Between Tottenham Hale and Blackhorse Road>, u'1029200': <Tube.Train LCID(1029200) on Victoria Line at Between Seven Sisters and Finsbury Park>, u'1031053': <Tube.Train LCID(1031053) on Victoria Line at At Green Park>}
-
-	>>> tube.map.get(stationcode="OXC").getAllTrains()
-	{'trains': {u'1032146': <Tube.Train LCID(1032146) on Victoria Line at Between Pimlico and Victoria>, u'1029173': <Tube.Train LCID(1029173) on Victoria Line at At Brixton Platform 2>, u'1029333': <Tube.Train LCID(1029333) on Victoria Line at At Kings Cross St. Pancras>, u'1031053': <Tube.Train LCID(1031053) on Victoria Line at Between Green Park and Oxford Circus>, u'1030100': <Tube.Train LCID(1030100) on Victoria Line at Between Highbury & Islington and Kings Cross St. P>, u'1029917': <Tube.Train LCID(1029917) on Victoria Line at At Warren Street>, u'1028128': <Tube.Train LCID(1028128) on Victoria Line at Between Victoria and Green Park>, u'1029114': <Tube.Train LCID(1029114) on Victoria Line at Between Tottenham Hale and Blackhorse Road>, u'1029515': <Tube.Train LCID(1029515) on Victoria Line at At Walthamstow Central>, u'1029235': <Tube.Train LCID(1029235) on Victoria Line at At Euston>, u'1030194': <Tube.Train LCID(1030194) on Victoria Line at Between Seven Sisters and Finsbury Park>, u'1029869': <Tube.Train LCID(1029869) on Victoria Line at At Brixton Platform 1>, u'1029200': <Tube.Train LCID(1029200) on Victoria Line at At Finsbury Park>, u'1029892': <Tube.Train LCID(1029892) on Victoria Line at At Seven Sisters Platform 5>}}
-
-```
-
-
 
 
 

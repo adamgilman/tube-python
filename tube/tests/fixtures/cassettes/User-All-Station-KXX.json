@@ -1,0 +1,342 @@
+{
+    "version": 1, 
+    "interactions": [
+        {
+            "request": {
+                "body": null, 
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.5.0 CPython/2.7.8 Darwin/14.0.0"
+                    ]
+                }, 
+                "method": "GET", 
+                "uri": "http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/H/KXX"
+            }, 
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "headers": {
+                    "content-length": [
+                        "8446"
+                    ], 
+                    "x-aspnet-version": [
+                        "4.0.30319"
+                    ], 
+                    "set-cookie": [
+                        "ASP.NET_SessionId=omy0cpmzssxqv1ktrdw2sclb; path=/; HttpOnly"
+                    ], 
+                    "data-last-updated": [
+                        "05/06/2015 12:01:46"
+                    ], 
+                    "expires": [
+                        "Wed, 06 May 2015 12:03:53 GMT"
+                    ], 
+                    "vary": [
+                        "*"
+                    ], 
+                    "server": [
+                        "Microsoft-IIS/7.0"
+                    ], 
+                    "last-modified": [
+                        "Wed, 06 May 2015 12:03:23 GMT"
+                    ], 
+                    "cache-control": [
+                        "public, max-age=30"
+                    ], 
+                    "date": [
+                        "Wed, 06 May 2015 12:03:22 GMT"
+                    ], 
+                    "x-powered-by": [
+                        "ASP.NET"
+                    ], 
+                    "content-type": [
+                        "text/xml"
+                    ]
+                }, 
+                "body": {
+                    "string": "\ufeff<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ROOT xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://trackernet.lul.co.uk\">\r\n  <Disclaimer>This system is an INFORMATION ONLY system, relying entirely on \r\n\t\t\t\tinformation received from the relevant Operational Railway Control System(s). It is NOT \r\n\t\t\t\tconsidered a safety related system in the Railway Engineering sense. However, \r\n\t\t\t\tthe information reported may trigger user intervention by staff regarding possible \r\n\t\t\t\tincidents on the railway, and confirmation of the situation observed should be obtained prior \r\n\t\t\t\tto any corrective action being taken.</Disclaimer>\r\n  <WhenCreated>6 May 2015 13:01:46</WhenCreated>\r\n  <Line>H</Line>\r\n  <LineName>Circle, Hammersmith &amp; City Line</LineName>\r\n  <S Code=\"KXX\" Mess=\"\" N=\"King's Cross St. Pancras.\" CurTime=\"13:01:46\">\r\n    <P N=\"Westbound - Platform 1\" Num=\"1\" TrackCode=\"TJNC:ND:NE\" NextTrain=\"false\">\r\n      <T LCID=\"5870181\" SetNo=\"441\" TripNo=\"10\" SecondsTo=\"15\" TimeTo=\"0:30\" Location=\"Approaching King's Cross\" Destination=\"Uxbridge\" DestCode=\"445\" Order=\"0\" DepartTime=\"12:01:46\" DepartInterval=\"15\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ210E\" LN=\"M\" />\r\n      <T LCID=\"5870881\" SetNo=\"210\" TripNo=\"12\" SecondsTo=\"188\" TimeTo=\"3:30\" Location=\"At Farringdon Platform 2\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"188\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJCRFAR_2\" LN=\"H\" />\r\n      <T LCID=\"1000801\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"238\" TimeTo=\"4:00\" Location=\"Farringdon Sidings\" Destination=\"Special\" DestCode=\"414\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"238\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJGT\" LN=\"M\" />\r\n      <T LCID=\"5584481\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"238\" TimeTo=\"4:00\" Location=\"Farringdon Sidings\" Destination=\"Special\" DestCode=\"414\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"238\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJGH\" LN=\"M\" />\r\n      <T LCID=\"1000781\" SetNo=\"641\" TripNo=\"81\" SecondsTo=\"238\" TimeTo=\"4:00\" Location=\"Farringdon sidings\" Destination=\"Special\" DestCode=\"414\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"238\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJGD\" LN=\"M\" />\r\n      <T LCID=\"5872331\" SetNo=\"442\" TripNo=\"7\" SecondsTo=\"435\" TimeTo=\"7:00\" Location=\"At Moorgate Platform 2\" Destination=\"Uxbridge\" DestCode=\"445\" Order=\"0\" DepartTime=\"12:01:09\" DepartInterval=\"435\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ240B\" LN=\"M\" />\r\n      <T LCID=\"5875851\" SetNo=\"500\" TripNo=\"82\" SecondsTo=\"490\" TimeTo=\"8:00\" Location=\"Left Liverpool Street\" Destination=\"Check Front of Train\" DestCode=\"199\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"490\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJH\" LN=\"H\" />\r\n      <T LCID=\"5870921\" SetNo=\"406\" TripNo=\"10\" SecondsTo=\"757\" TimeTo=\"13:00\" Location=\"At Aldgate Platform 3\" Destination=\"Chesham\" DestCode=\"97\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"757\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJSB/SCALD\" LN=\"M\" />\r\n      <T LCID=\"5872501\" SetNo=\"443\" TripNo=\"10\" SecondsTo=\"791\" TimeTo=\"13:00\" Location=\"At Aldgate Platform 2\" Destination=\"Uxbridge\" DestCode=\"445\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"791\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJTB/TEALD\" LN=\"M\" />\r\n      <T LCID=\"5875601\" SetNo=\"244\" TripNo=\"6\" SecondsTo=\"856\" TimeTo=\"14:00\" Location=\"Left Whitechapel\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:45\" DepartInterval=\"856\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TDCLWHI\" LN=\"H\" />\r\n      <T LCID=\"5872491\" SetNo=\"245\" TripNo=\"6\" SecondsTo=\"1159\" TimeTo=\"19:00\" Location=\"Between Bow Road and Stepney Green\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:35\" DepartInterval=\"1159\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBHTDMLEW\" LN=\"H\" />\r\n      <T LCID=\"5873561\" SetNo=\"211\" TripNo=\"81\" SecondsTo=\"1182\" TimeTo=\"20:00\" Location=\"Between Blackfriars and Mansion House\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:42\" DepartInterval=\"1182\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TD831A\" LN=\"H\" />\r\n      <T LCID=\"5875551\" SetNo=\"212\" TripNo=\"10\" SecondsTo=\"1461\" TimeTo=\"24:00\" Location=\"Approaching Embankment\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:41\" DepartInterval=\"1461\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TD801B\" LN=\"H\" />\r\n      <T LCID=\"5876381\" SetNo=\"246\" TripNo=\"7\" SecondsTo=\"1638\" TimeTo=\"27:00\" Location=\"Between East Ham and Plaistow\" Destination=\"Check Front of Train\" DestCode=\"199\" Order=\"0\" DepartTime=\"12:01:30\" DepartInterval=\"1638\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBHTDUPKW\" LN=\"H\" />\r\n      <T LCID=\"5864731\" SetNo=\"230\" TripNo=\"6\" SecondsTo=\"1793\" TimeTo=\"30:00\" Location=\"Between East Ham and Upton Park\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:00:47\" DepartInterval=\"1793\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TDBT.BR.BPUPP\" LN=\"H\" />\r\n    </P>\r\n    <P N=\"Eastbound - Platform 2\" Num=\"2\" TrackCode=\"TJ205.SC\" NextTrain=\"false\">\r\n      <T LCID=\"5853201\" SetNo=\"445\" TripNo=\"7\" SecondsTo=\"92\" TimeTo=\"2:00\" Location=\"At Euston Square Platform 2\" Destination=\"Aldgate\" DestCode=\"12\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"92\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ197A\" LN=\"M\" />\r\n      <T LCID=\"5875631\" SetNo=\"202\" TripNo=\"13\" SecondsTo=\"234\" TimeTo=\"4:00\" Location=\"At Great Portland Street Platform 2\" Destination=\"Circle Line\" DestCode=\"103\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"234\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ185\" LN=\"H\" />\r\n      <T LCID=\"5876281\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"657\" TimeTo=\"11:00\" Location=\"Left Edgware Road\" Destination=\"Check Front of Train\" DestCode=\"0\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"657\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJBJEDG\" LN=\"M\" />\r\n      <T LCID=\"5876051\" SetNo=\"203\" TripNo=\"11\" SecondsTo=\"718\" TimeTo=\"12:00\" Location=\"Between Westbourne Park and Paddington\" Destination=\"Check Front of Train\" DestCode=\"518\" Order=\"0\" DepartTime=\"12:01:13\" DepartInterval=\"718\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBHTHROYO\" LN=\"H\" />\r\n      <T LCID=\"5853091\" SetNo=\"446\" TripNo=\"8\" SecondsTo=\"736\" TimeTo=\"12:00\" Location=\"Left Finchley Road\" Destination=\"Aldgate\" DestCode=\"12\" Order=\"0\" DepartTime=\"12:01:43\" DepartInterval=\"736\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJDFFNR\" LN=\"M\" />\r\n      <T LCID=\"5872401\" SetNo=\"410\" TripNo=\"6\" SecondsTo=\"849\" TimeTo=\"14:00\" Location=\"Between Willesden Green and Finchley Road\" Destination=\"Aldgate\" DestCode=\"12\" Order=\"0\" DepartTime=\"12:01:40\" DepartInterval=\"849\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ835C\" LN=\"M\" />\r\n      <T LCID=\"5873821\" SetNo=\"447\" TripNo=\"6\" SecondsTo=\"941\" TimeTo=\"16:00\" Location=\"Approaching Willesden Green\" Destination=\"Aldgate\" DestCode=\"12\" Order=\"0\" DepartTime=\"12:01:42\" DepartInterval=\"941\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ821C\" LN=\"M\" />\r\n      <T LCID=\"5876171\" SetNo=\"237\" TripNo=\"6\" SecondsTo=\"1018\" TimeTo=\"17:00\" Location=\"Between Wood Lane and Ladbroke Grove\" Destination=\"Check Front of Train\" DestCode=\"518\" Order=\"0\" DepartTime=\"12:00:27\" DepartInterval=\"1018\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBHTHLATO\" LN=\"H\" />\r\n      <T LCID=\"5873811\" SetNo=\"216\" TripNo=\"10\" SecondsTo=\"1183\" TimeTo=\"20:00\" Location=\"Left Gloucester Road\" Destination=\"Circle Line\" DestCode=\"103\" Order=\"0\" DepartTime=\"12:01:45\" DepartInterval=\"1183\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TD306C_1\" LN=\"H\" />\r\n      <T LCID=\"5854341\" SetNo=\"450\" TripNo=\"8\" SecondsTo=\"1499\" TimeTo=\"25:00\" Location=\"Between Northwick Park and  Preston Road\" Destination=\"Aldgate\" DestCode=\"19\" Order=\"0\" DepartTime=\"12:00:34\" DepartInterval=\"1499\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TFKTNWPPRDOL\" LN=\"M\" />\r\n      <T LCID=\"5871251\" SetNo=\"411\" TripNo=\"6\" SecondsTo=\"1765\" TimeTo=\"29:00\" Location=\"At Harrow-on-the-Hill Platform 6\" Destination=\"Aldgate\" DestCode=\"19\" Order=\"0\" DepartTime=\"12:01:19\" DepartInterval=\"1765\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJDNHOH\" LN=\"M\" />\r\n    </P>\r\n  </S>\r\n</ROOT>"
+                }
+            }
+        }, 
+        {
+            "request": {
+                "body": null, 
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.5.0 CPython/2.7.8 Darwin/14.0.0"
+                    ]
+                }, 
+                "method": "GET", 
+                "uri": "http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/V/KXX"
+            }, 
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "headers": {
+                    "content-length": [
+                        "5057"
+                    ], 
+                    "x-aspnet-version": [
+                        "4.0.30319"
+                    ], 
+                    "set-cookie": [
+                        "ASP.NET_SessionId=idzk10px2m124fskjxu0wpfe; path=/; HttpOnly"
+                    ], 
+                    "data-last-updated": [
+                        "05/06/2015 12:03:03"
+                    ], 
+                    "expires": [
+                        "Wed, 06 May 2015 12:03:53 GMT"
+                    ], 
+                    "vary": [
+                        "*"
+                    ], 
+                    "server": [
+                        "Microsoft-IIS/7.0"
+                    ], 
+                    "last-modified": [
+                        "Wed, 06 May 2015 12:03:23 GMT"
+                    ], 
+                    "cache-control": [
+                        "public, max-age=30"
+                    ], 
+                    "date": [
+                        "Wed, 06 May 2015 12:03:22 GMT"
+                    ], 
+                    "x-powered-by": [
+                        "ASP.NET"
+                    ], 
+                    "content-type": [
+                        "text/xml"
+                    ]
+                }, 
+                "body": {
+                    "string": "\ufeff<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ROOT xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://trackernet.lul.co.uk\">\r\n  <Disclaimer>This system is an INFORMATION ONLY system, relying entirely on \r\n\t\t\t\tinformation received from the relevant Operational Railway Control System(s). It is NOT \r\n\t\t\t\tconsidered a safety related system in the Railway Engineering sense. However, \r\n\t\t\t\tthe information reported may trigger user intervention by staff regarding possible \r\n\t\t\t\tincidents on the railway, and confirmation of the situation observed should be obtained prior \r\n\t\t\t\tto any corrective action being taken.</Disclaimer>\r\n  <WhenCreated>6 May 2015 13:03:03</WhenCreated>\r\n  <Line>V</Line>\r\n  <LineName>Victoria Line</LineName>\r\n  <S Code=\"KXX\" Mess=\"\" N=\"King's Cross St. Pancras.\" CurTime=\"13:03:03\">\r\n    <P N=\"Northbound - Platform 3\" Num=\"3\" TrackCode=\"TV6374\" NextTrain=\"false\">\r\n      <T LCID=\"3755871\" SetNo=\"243\" TripNo=\"10\" SecondsTo=\"133\" TimeTo=\"2:30\" Location=\"Between Euston and Warren Street\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"12:02:59\" DepartInterval=\"133\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6472\" LN=\"V\" />\r\n      <T LCID=\"3736651\" SetNo=\"227\" TripNo=\"12\" SecondsTo=\"316\" TimeTo=\"5:00\" Location=\"Approaching Oxford Circus\" Destination=\"Seven Sisters\" DestCode=\"397\" Order=\"0\" DepartTime=\"12:02:49\" DepartInterval=\"316\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6560\" LN=\"V\" />\r\n      <T LCID=\"3741471\" SetNo=\"246\" TripNo=\"10\" SecondsTo=\"452\" TimeTo=\"8:00\" Location=\"Approaching Green Park\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"12:02:55\" DepartInterval=\"452\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6586\" LN=\"V\" />\r\n      <T LCID=\"3748761\" SetNo=\"230\" TripNo=\"12\" SecondsTo=\"656\" TimeTo=\"11:00\" Location=\"Departing Pimlico\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"12:02:55\" DepartInterval=\"656\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6672\" LN=\"V\" />\r\n      <T LCID=\"3739801\" SetNo=\"213\" TripNo=\"14\" SecondsTo=\"764\" TimeTo=\"13:00\" Location=\"At Vauxhall\" Destination=\"Seven Sisters\" DestCode=\"397\" Order=\"0\" DepartTime=\"12:02:24\" DepartInterval=\"764\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6724\" LN=\"V\" />\r\n      <T LCID=\"3732041\" SetNo=\"217\" TripNo=\"14\" SecondsTo=\"852\" TimeTo=\"14:00\" Location=\"Departing Stockwell\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"12:03:00\" DepartInterval=\"852\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6772\" LN=\"V\" />\r\n      <T LCID=\"3741861\" SetNo=\"232\" TripNo=\"12\" SecondsTo=\"1139\" TimeTo=\"19:00\" Location=\"At Brixton Platform 1\" Destination=\"Walthamstow Central\" DestCode=\"457\" Order=\"0\" DepartTime=\"12:02:00\" DepartInterval=\"1139\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6824\" LN=\"V\" />\r\n    </P>\r\n    <P N=\"Southbound - Platform 4\" Num=\"4\" TrackCode=\"TV6375\" NextTrain=\"false\">\r\n      <T LCID=\"3734731\" SetNo=\"237\" TripNo=\"11\" SecondsTo=\"39\" TimeTo=\"1:00\" Location=\"Between Highbury &amp; Islington and Kings Cross St. P\" Destination=\"Brixton\" DestCode=\"88\" Order=\"0\" DepartTime=\"12:03:00\" DepartInterval=\"39\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6357\" LN=\"V\" />\r\n      <T LCID=\"3733551\" SetNo=\"233\" TripNo=\"11\" SecondsTo=\"176\" TimeTo=\"3:00\" Location=\"Between Finsbury Park and Highbury &amp; Islington\" Destination=\"Brixton\" DestCode=\"88\" Order=\"0\" DepartTime=\"12:02:49\" DepartInterval=\"176\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6311\" LN=\"V\" />\r\n      <T LCID=\"3739071\" SetNo=\"210\" TripNo=\"17\" SecondsTo=\"311\" TimeTo=\"5:00\" Location=\"Between Seven Sisters and Finsbury Park\" Destination=\"Brixton\" DestCode=\"88\" Order=\"0\" DepartTime=\"12:02:55\" DepartInterval=\"311\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6261\" LN=\"V\" />\r\n      <T LCID=\"3743351\" SetNo=\"214\" TripNo=\"15\" SecondsTo=\"479\" TimeTo=\"8:00\" Location=\"At Seven Sisters Platform 5\" Destination=\"Brixton\" DestCode=\"88\" Order=\"0\" DepartTime=\"12:02:24\" DepartInterval=\"479\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6225\" LN=\"V\" />\r\n      <T LCID=\"3739211\" SetNo=\"222\" TripNo=\"13\" SecondsTo=\"624\" TimeTo=\"10:00\" Location=\"Between Tottenham Hale and Blackhorse Road\" Destination=\"Brixton\" DestCode=\"88\" Order=\"0\" DepartTime=\"12:02:49\" DepartInterval=\"624\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6119\" LN=\"V\" />\r\n      <T LCID=\"3754981\" SetNo=\"220\" TripNo=\"13\" SecondsTo=\"775\" TimeTo=\"13:00\" Location=\"At Walthamstow Central\" Destination=\"Brixton\" DestCode=\"88\" Order=\"0\" DepartTime=\"12:00:59\" DepartInterval=\"775\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6024\" LN=\"V\" />\r\n      <T LCID=\"3732711\" SetNo=\"231\" TripNo=\"13\" SecondsTo=\"953\" TimeTo=\"16:00\" Location=\"At Walthamstow Central\" Destination=\"Brixton\" DestCode=\"88\" Order=\"0\" DepartTime=\"12:02:12\" DepartInterval=\"953\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TV6025\" LN=\"V\" />\r\n    </P>\r\n  </S>\r\n</ROOT>"
+                }
+            }
+        }, 
+        {
+            "request": {
+                "body": null, 
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.5.0 CPython/2.7.8 Darwin/14.0.0"
+                    ]
+                }, 
+                "method": "GET", 
+                "uri": "http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/M/KXX"
+            }, 
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "headers": {
+                    "content-length": [
+                        "8752"
+                    ], 
+                    "x-aspnet-version": [
+                        "4.0.30319"
+                    ], 
+                    "set-cookie": [
+                        "ASP.NET_SessionId=if5ntlu1sj1aayv34uqr1zup; path=/; HttpOnly"
+                    ], 
+                    "data-last-updated": [
+                        "05/06/2015 12:01:51"
+                    ], 
+                    "expires": [
+                        "Wed, 06 May 2015 12:03:54 GMT"
+                    ], 
+                    "vary": [
+                        "*"
+                    ], 
+                    "server": [
+                        "Microsoft-IIS/7.0"
+                    ], 
+                    "last-modified": [
+                        "Wed, 06 May 2015 12:03:24 GMT"
+                    ], 
+                    "cache-control": [
+                        "public, max-age=30"
+                    ], 
+                    "date": [
+                        "Wed, 06 May 2015 12:03:23 GMT"
+                    ], 
+                    "x-powered-by": [
+                        "ASP.NET"
+                    ], 
+                    "content-type": [
+                        "text/xml"
+                    ]
+                }, 
+                "body": {
+                    "string": "\ufeff<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ROOT xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://trackernet.lul.co.uk\">\r\n  <Disclaimer>This system is an INFORMATION ONLY system, relying entirely on \r\n\t\t\t\tinformation received from the relevant Operational Railway Control System(s). It is NOT \r\n\t\t\t\tconsidered a safety related system in the Railway Engineering sense. However, \r\n\t\t\t\tthe information reported may trigger user intervention by staff regarding possible \r\n\t\t\t\tincidents on the railway, and confirmation of the situation observed should be obtained prior \r\n\t\t\t\tto any corrective action being taken.</Disclaimer>\r\n  <WhenCreated>6 May 2015 13:01:50</WhenCreated>\r\n  <Line>M</Line>\r\n  <LineName>Metropolitan Line</LineName>\r\n  <S Code=\"KXX\" Mess=\"\" N=\"King's Cross St. Pancras.\" CurTime=\"13:01:50\">\r\n    <P N=\"Westbound - Platform 1\" Num=\"1\" TrackCode=\"TJNC:ND:NE\" NextTrain=\"false\">\r\n      <T LCID=\"3751741\" SetNo=\"441\" TripNo=\"10\" SecondsTo=\"15\" TimeTo=\"0:30\" Location=\"Approaching King's Cross\" Destination=\"Uxbridge\" DestCode=\"445\" Order=\"0\" DepartTime=\"12:01:46\" DepartInterval=\"15\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ210E\" LN=\"M\" />\r\n      <T LCID=\"3752461\" SetNo=\"210\" TripNo=\"12\" SecondsTo=\"188\" TimeTo=\"3:30\" Location=\"At Farringdon Platform 2\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"188\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJCRFAR_2\" LN=\"H\" />\r\n      <T LCID=\"1001941\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"238\" TimeTo=\"4:00\" Location=\"Farringdon Sidings\" Destination=\"Special\" DestCode=\"414\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"238\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJGT\" LN=\"M\" />\r\n      <T LCID=\"3464271\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"238\" TimeTo=\"4:00\" Location=\"Farringdon Sidings\" Destination=\"Special\" DestCode=\"414\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"238\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJGH\" LN=\"M\" />\r\n      <T LCID=\"1001921\" SetNo=\"641\" TripNo=\"81\" SecondsTo=\"238\" TimeTo=\"4:00\" Location=\"Farringdon sidings\" Destination=\"Special\" DestCode=\"414\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"238\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJGD\" LN=\"M\" />\r\n      <T LCID=\"3753901\" SetNo=\"442\" TripNo=\"7\" SecondsTo=\"435\" TimeTo=\"7:00\" Location=\"At Moorgate Platform 2\" Destination=\"Uxbridge\" DestCode=\"445\" Order=\"0\" DepartTime=\"12:01:09\" DepartInterval=\"435\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ240B\" LN=\"M\" />\r\n      <T LCID=\"3757421\" SetNo=\"500\" TripNo=\"82\" SecondsTo=\"490\" TimeTo=\"8:00\" Location=\"Left Liverpool Street\" Destination=\"Check Front of Train\" DestCode=\"199\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"490\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJH\" LN=\"H\" />\r\n      <T LCID=\"3752501\" SetNo=\"406\" TripNo=\"10\" SecondsTo=\"757\" TimeTo=\"13:00\" Location=\"At Aldgate Platform 3\" Destination=\"Chesham\" DestCode=\"97\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"757\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJSB/SCALD\" LN=\"M\" />\r\n      <T LCID=\"3754091\" SetNo=\"443\" TripNo=\"10\" SecondsTo=\"791\" TimeTo=\"13:00\" Location=\"At Aldgate Platform 2\" Destination=\"Uxbridge\" DestCode=\"445\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"791\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJTB/TEALD\" LN=\"M\" />\r\n      <T LCID=\"3757181\" SetNo=\"244\" TripNo=\"6\" SecondsTo=\"856\" TimeTo=\"14:00\" Location=\"Left Whitechapel\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:46\" DepartInterval=\"856\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TDCLWHI\" LN=\"H\" />\r\n      <T LCID=\"3754081\" SetNo=\"245\" TripNo=\"6\" SecondsTo=\"1159\" TimeTo=\"19:00\" Location=\"Between Bow Road and Stepney Green\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:36\" DepartInterval=\"1159\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBHTDMLEW\" LN=\"H\" />\r\n      <T LCID=\"3755141\" SetNo=\"211\" TripNo=\"81\" SecondsTo=\"1162\" TimeTo=\"19:00\" Location=\"Between Blackfriars and Mansion House\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:46\" DepartInterval=\"1162\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TD831B\" LN=\"H\" />\r\n      <T LCID=\"3757141\" SetNo=\"212\" TripNo=\"10\" SecondsTo=\"1461\" TimeTo=\"24:00\" Location=\"Approaching Embankment\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:01:42\" DepartInterval=\"1461\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TD801B\" LN=\"H\" />\r\n      <T LCID=\"3757961\" SetNo=\"246\" TripNo=\"7\" SecondsTo=\"1638\" TimeTo=\"27:00\" Location=\"Between East Ham and Plaistow\" Destination=\"Check Front of Train\" DestCode=\"199\" Order=\"0\" DepartTime=\"12:01:30\" DepartInterval=\"1638\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBHTDUPKW\" LN=\"H\" />\r\n      <T LCID=\"3746281\" SetNo=\"230\" TripNo=\"6\" SecondsTo=\"1793\" TimeTo=\"30:00\" Location=\"Between East Ham and Upton Park\" Destination=\"Hammersmith\" DestCode=\"196\" Order=\"0\" DepartTime=\"12:00:49\" DepartInterval=\"1793\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TDBT.BR.BPUPP\" LN=\"H\" />\r\n    </P>\r\n    <P N=\"Eastbound - Platform 2\" Num=\"2\" TrackCode=\"TJ205.SC\" NextTrain=\"false\">\r\n      <T LCID=\"3734681\" SetNo=\"445\" TripNo=\"7\" SecondsTo=\"92\" TimeTo=\"2:00\" Location=\"At Euston Square Platform 2\" Destination=\"Aldgate\" DestCode=\"12\" Order=\"0\" DepartTime=\"12:01:39\" DepartInterval=\"92\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ197A\" LN=\"M\" />\r\n      <T LCID=\"3757211\" SetNo=\"202\" TripNo=\"13\" SecondsTo=\"224\" TimeTo=\"4:00\" Location=\"At Great Portland Street Platform 2\" Destination=\"Circle Line\" DestCode=\"103\" Order=\"0\" DepartTime=\"12:01:49\" DepartInterval=\"224\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ187\" LN=\"H\" />\r\n      <T LCID=\"3757861\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"649\" TimeTo=\"11:00\" Location=\"Between Edgware Road and Baker Street\" Destination=\"Check Front of Train\" DestCode=\"0\" Order=\"0\" DepartTime=\"12:01:46\" DepartInterval=\"649\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJBQBKM_1\" LN=\"M\" />\r\n      <T LCID=\"3757611\" SetNo=\"203\" TripNo=\"11\" SecondsTo=\"718\" TimeTo=\"12:00\" Location=\"Between Westbourne Park and Paddington\" Destination=\"Check Front of Train\" DestCode=\"518\" Order=\"0\" DepartTime=\"12:01:13\" DepartInterval=\"718\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBHTHROYO\" LN=\"H\" />\r\n      <T LCID=\"3734571\" SetNo=\"446\" TripNo=\"8\" SecondsTo=\"730\" TimeTo=\"12:00\" Location=\"Between Finchley Road and Baker Street\" Destination=\"Aldgate\" DestCode=\"12\" Order=\"0\" DepartTime=\"12:01:48\" DepartInterval=\"730\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJDHFNR\" LN=\"M\" />\r\n      <T LCID=\"3753981\" SetNo=\"410\" TripNo=\"6\" SecondsTo=\"849\" TimeTo=\"14:00\" Location=\"Between Willesden Green and Finchley Road\" Destination=\"Aldgate\" DestCode=\"12\" Order=\"0\" DepartTime=\"12:01:40\" DepartInterval=\"849\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ835C\" LN=\"M\" />\r\n      <T LCID=\"3755401\" SetNo=\"447\" TripNo=\"6\" SecondsTo=\"941\" TimeTo=\"16:00\" Location=\"Approaching Willesden Green\" Destination=\"Aldgate\" DestCode=\"12\" Order=\"0\" DepartTime=\"12:01:42\" DepartInterval=\"941\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJ821C\" LN=\"M\" />\r\n      <T LCID=\"3757751\" SetNo=\"237\" TripNo=\"6\" SecondsTo=\"1018\" TimeTo=\"17:00\" Location=\"Between Wood Lane and Ladbroke Grove\" Destination=\"Check Front of Train\" DestCode=\"518\" Order=\"0\" DepartTime=\"12:00:27\" DepartInterval=\"1018\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TBHTHLATO\" LN=\"H\" />\r\n      <T LCID=\"3755391\" SetNo=\"216\" TripNo=\"10\" SecondsTo=\"1183\" TimeTo=\"20:00\" Location=\"Left Gloucester Road\" Destination=\"Circle Line\" DestCode=\"103\" Order=\"0\" DepartTime=\"12:01:46\" DepartInterval=\"1183\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TD306C_1\" LN=\"H\" />\r\n      <T LCID=\"3735811\" SetNo=\"450\" TripNo=\"8\" SecondsTo=\"1499\" TimeTo=\"25:00\" Location=\"Between Northwick Park and  Preston Road\" Destination=\"Aldgate\" DestCode=\"19\" Order=\"0\" DepartTime=\"12:00:34\" DepartInterval=\"1499\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TFKTNWPPRDOL\" LN=\"M\" />\r\n      <T LCID=\"3752841\" SetNo=\"411\" TripNo=\"6\" SecondsTo=\"1765\" TimeTo=\"29:00\" Location=\"At Harrow-on-the-Hill Platform 6\" Destination=\"Aldgate\" DestCode=\"19\" Order=\"0\" DepartTime=\"12:01:19\" DepartInterval=\"1765\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TJDNHOH\" LN=\"M\" />\r\n      <T LCID=\"3755921\" SetNo=\"217\" TripNo=\"12\" SecondsTo=\"1766\" TimeTo=\"29:00\" Location=\"At Westminster Platform 1\" Destination=\"Circle Line\" DestCode=\"103\" Order=\"0\" DepartTime=\"12:01:16\" DepartInterval=\"1766\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TD804\" LN=\"H\" />\r\n    </P>\r\n  </S>\r\n</ROOT>"
+                }
+            }
+        }, 
+        {
+            "request": {
+                "body": null, 
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.5.0 CPython/2.7.8 Darwin/14.0.0"
+                    ]
+                }, 
+                "method": "GET", 
+                "uri": "http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/P/KXX"
+            }, 
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "headers": {
+                    "content-length": [
+                        "7478"
+                    ], 
+                    "x-aspnet-version": [
+                        "4.0.30319"
+                    ], 
+                    "data-last-updated": [
+                        "05/06/2015 12:03:01"
+                    ], 
+                    "expires": [
+                        "Wed, 06 May 2015 12:03:53 GMT"
+                    ], 
+                    "vary": [
+                        "*"
+                    ], 
+                    "server": [
+                        "Microsoft-IIS/7.0"
+                    ], 
+                    "last-modified": [
+                        "Wed, 06 May 2015 12:03:23 GMT"
+                    ], 
+                    "cache-control": [
+                        "public, max-age=29"
+                    ], 
+                    "date": [
+                        "Wed, 06 May 2015 12:03:24 GMT"
+                    ], 
+                    "x-powered-by": [
+                        "ASP.NET"
+                    ], 
+                    "content-type": [
+                        "text/xml"
+                    ]
+                }, 
+                "body": {
+                    "string": "\ufeff<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ROOT xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://trackernet.lul.co.uk\">\r\n  <Disclaimer>This system is an INFORMATION ONLY system, relying entirely on \r\n\t\t\t\tinformation received from the relevant Operational Railway Control System(s). It is NOT \r\n\t\t\t\tconsidered a safety related system in the Railway Engineering sense. However, \r\n\t\t\t\tthe information reported may trigger user intervention by staff regarding possible \r\n\t\t\t\tincidents on the railway, and confirmation of the situation observed should be obtained prior \r\n\t\t\t\tto any corrective action being taken.</Disclaimer>\r\n  <WhenCreated>6 May 2015 13:03:01</WhenCreated>\r\n  <Line>P</Line>\r\n  <LineName>Piccadilly Line</LineName>\r\n  <S Code=\"KXX\" Mess=\"\" N=\"King's Cross St. Pancras.\" CurTime=\"13:03:01\">\r\n    <P N=\"Westbound - Platform 5\" Num=\"5\" TrackCode=\"TP7900.790AKXX\" NextTrain=\"false\">\r\n      <T LCID=\"5875041\" SetNo=\"304\" TripNo=\"6\" SecondsTo=\"0\" TimeTo=\"-\" Location=\"At Platform\" Destination=\"Heathrow via T4 Loop\" DestCode=\"410\" Order=\"0\" DepartTime=\"12:02:19\" DepartInterval=\"0\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP7900.790AKXX\" LN=\"P\" />\r\n      <T LCID=\"5875231\" SetNo=\"261\" TripNo=\"6\" SecondsTo=\"187\" TimeTo=\"3:30\" Location=\"At Caledonian Road Platform 1\" Destination=\"Uxbridge\" DestCode=\"448\" Order=\"0\" DepartTime=\"12:02:24\" DepartInterval=\"187\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP810B.A\" LN=\"P\" />\r\n      <T LCID=\"5875881\" SetNo=\"264\" TripNo=\"6\" SecondsTo=\"371\" TimeTo=\"6:00\" Location=\"At Arsenal Platform 1\" Destination=\"Check Front of Train\" DestCode=\"512\" Order=\"0\" DepartTime=\"12:02:13\" DepartInterval=\"371\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP830B.A\" LN=\"P\" />\r\n      <T LCID=\"5863541\" SetNo=\"306\" TripNo=\"6\" SecondsTo=\"505\" TimeTo=\"8:00\" Location=\"At Finsbury Park Platform 3\" Destination=\"Heathrow via T4 Loop\" DestCode=\"410\" Order=\"0\" DepartTime=\"12:02:24\" DepartInterval=\"505\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP840B.A\" LN=\"P\" />\r\n      <T LCID=\"5876221\" SetNo=\"356\" TripNo=\"6\" SecondsTo=\"808\" TimeTo=\"13:00\" Location=\"At Turnpike Lane Platform 1\" Destination=\"Check Front of Train\" DestCode=\"512\" Order=\"0\" DepartTime=\"12:02:45\" DepartInterval=\"808\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP870A.B\" LN=\"P\" />\r\n      <T LCID=\"5872351\" SetNo=\"315\" TripNo=\"5\" SecondsTo=\"955\" TimeTo=\"16:00\" Location=\"Between Bounds Green and Wood Green\" Destination=\"Rayners Lane\" DestCode=\"372\" Order=\"0\" DepartTime=\"12:02:55\" DepartInterval=\"955\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP886C\" LN=\"P\" />\r\n      <T LCID=\"5865581\" SetNo=\"311\" TripNo=\"5\" SecondsTo=\"1098\" TimeTo=\"18:00\" Location=\"At Bounds Green Platform 1\" Destination=\"Heathrow T123 + 5\" DestCode=\"219\" Order=\"0\" DepartTime=\"12:02:44\" DepartInterval=\"1098\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP890AB\" LN=\"P\" />\r\n      <T LCID=\"5876031\" SetNo=\"310\" TripNo=\"6\" SecondsTo=\"1317\" TimeTo=\"22:00\" Location=\"Between Southgate and Arnos Grove\" Destination=\"Heathrow via T4 Loop\" DestCode=\"410\" Order=\"0\" DepartTime=\"12:02:50\" DepartInterval=\"1317\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP904A\" LN=\"P\" />\r\n      <T LCID=\"5866311\" SetNo=\"307\" TripNo=\"5\" SecondsTo=\"1575\" TimeTo=\"26:00\" Location=\"At Southgate Platform 1\" Destination=\"Uxbridge\" DestCode=\"448\" Order=\"0\" DepartTime=\"12:02:02\" DepartInterval=\"1575\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP910A\" LN=\"P\" />\r\n      <T LCID=\"5869001\" SetNo=\"342\" TripNo=\"10\" SecondsTo=\"1605\" TimeTo=\"27:00\" Location=\"Between Oakwood and Southgate\" Destination=\"Heathrow T123 + 5\" DestCode=\"219\" Order=\"0\" DepartTime=\"12:02:55\" DepartInterval=\"1605\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TPBPSTG_1\" LN=\"P\" />\r\n      <T LCID=\"5862691\" SetNo=\"313\" TripNo=\"6\" SecondsTo=\"1751\" TimeTo=\"29:00\" Location=\"Between Cockfosters and Oakwood\" Destination=\"Heathrow via T4 Loop\" DestCode=\"410\" Order=\"0\" DepartTime=\"12:02:58\" DepartInterval=\"1751\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP926A\" LN=\"P\" />\r\n    </P>\r\n    <P N=\"Eastbound - Platform 6\" Num=\"6\" TrackCode=\"TPBRKXX\" NextTrain=\"false\">\r\n      <T LCID=\"5857971\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"131\" TimeTo=\"2:30\" Location=\"At Russell Square Platform 1\" Destination=\"Cockfosters\" DestCode=\"104\" Order=\"0\" DepartTime=\"12:02:56\" DepartInterval=\"131\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP779A.B\" LN=\"P\" />\r\n      <T LCID=\"5864201\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"263\" TimeTo=\"4:30\" Location=\"Between Covent Garden and Holborn\" Destination=\"Cockfosters\" DestCode=\"104\" Order=\"0\" DepartTime=\"12:02:50\" DepartInterval=\"263\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP761BCHOL\" LN=\"P\" />\r\n      <T LCID=\"5874731\" SetNo=\"350\" TripNo=\"5\" SecondsTo=\"366\" TimeTo=\"6:00\" Location=\"Between Leicester Square and Covent Garden\" Destination=\"Arnos Grove\" DestCode=\"36\" Order=\"0\" DepartTime=\"12:02:58\" DepartInterval=\"366\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP749C.759ALSQ\" LN=\"P\" />\r\n      <T LCID=\"5850621\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"465\" TimeTo=\"8:00\" Location=\"Between Piccadilly Circus and Leicester Square\" Destination=\"Cockfosters\" DestCode=\"104\" Order=\"0\" DepartTime=\"12:02:50\" DepartInterval=\"465\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP739C.741ABPIC\" LN=\"P\" />\r\n      <T LCID=\"5854891\" SetNo=\"262\" TripNo=\"5\" SecondsTo=\"614\" TimeTo=\"10:00\" Location=\"At Green Park Platform 2\" Destination=\"Cockfosters\" DestCode=\"104\" Order=\"0\" DepartTime=\"12:02:58\" DepartInterval=\"614\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP729A.BGPK\" LN=\"P\" />\r\n      <T LCID=\"5857041\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"763\" TimeTo=\"13:00\" Location=\"At Hyde Park Corner Platform 1\" Destination=\"Cockfosters\" DestCode=\"104\" Order=\"0\" DepartTime=\"12:02:48\" DepartInterval=\"763\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP709AB\" LN=\"P\" />\r\n      <T LCID=\"5875491\" SetNo=\"333\" TripNo=\"5\" SecondsTo=\"927\" TimeTo=\"15:00\" Location=\"Between South Kensington and Knightsbridge\" Destination=\"Cockfosters\" DestCode=\"104\" Order=\"0\" DepartTime=\"12:02:59\" DepartInterval=\"927\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP681C-687A\" LN=\"P\" />\r\n      <T LCID=\"5868151\" SetNo=\"000\" TripNo=\"0\" SecondsTo=\"1051\" TimeTo=\"18:00\" Location=\"Approaching South Kensington\" Destination=\"Cockfosters\" DestCode=\"104\" Order=\"0\" DepartTime=\"12:02:58\" DepartInterval=\"1051\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP671CD\" LN=\"P\" />\r\n      <T LCID=\"5869391\" SetNo=\"326\" TripNo=\"4\" SecondsTo=\"1318\" TimeTo=\"22:00\" Location=\"Between Barons Court and Earl's Court\" Destination=\"Cockfosters\" DestCode=\"104\" Order=\"0\" DepartTime=\"12:02:54\" DepartInterval=\"1318\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP651ABCD\" LN=\"P\" />\r\n      <T LCID=\"5875731\" SetNo=\"351\" TripNo=\"7\" SecondsTo=\"1426\" TimeTo=\"24:00\" Location=\"At Barons Court Platform 3\" Destination=\"Arnos Grove\" DestCode=\"36\" Order=\"0\" DepartTime=\"12:02:48\" DepartInterval=\"1426\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP647AB\" LN=\"P\" />\r\n      <T LCID=\"5860861\" SetNo=\"335\" TripNo=\"5\" SecondsTo=\"1578\" TimeTo=\"26:00\" Location=\"Between Ravenscourt Park and Hammersmith\" Destination=\"Cockfosters\" DestCode=\"104\" Order=\"0\" DepartTime=\"12:02:56\" DepartInterval=\"1578\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TP641CD\" LN=\"P\" />\r\n    </P>\r\n  </S>\r\n</ROOT>"
+                }
+            }
+        }, 
+        {
+            "request": {
+                "body": null, 
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.5.0 CPython/2.7.8 Darwin/14.0.0"
+                    ]
+                }, 
+                "method": "GET", 
+                "uri": "http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/N/KXX"
+            }, 
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "headers": {
+                    "content-length": [
+                        "7165"
+                    ], 
+                    "x-aspnet-version": [
+                        "4.0.30319"
+                    ], 
+                    "set-cookie": [
+                        "ASP.NET_SessionId=on5dwdmdvd2eeuthp4nrqv2y; path=/; HttpOnly"
+                    ], 
+                    "data-last-updated": [
+                        "05/06/2015 12:03:15"
+                    ], 
+                    "expires": [
+                        "Wed, 06 May 2015 12:03:52 GMT"
+                    ], 
+                    "vary": [
+                        "*"
+                    ], 
+                    "server": [
+                        "Microsoft-IIS/7.0"
+                    ], 
+                    "last-modified": [
+                        "Wed, 06 May 2015 12:03:22 GMT"
+                    ], 
+                    "cache-control": [
+                        "public, max-age=30"
+                    ], 
+                    "date": [
+                        "Wed, 06 May 2015 12:03:22 GMT"
+                    ], 
+                    "x-powered-by": [
+                        "ASP.NET"
+                    ], 
+                    "content-type": [
+                        "text/xml"
+                    ]
+                }, 
+                "body": {
+                    "string": "\ufeff<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ROOT xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://trackernet.lul.co.uk\">\r\n  <Disclaimer>This system is an INFORMATION ONLY system, relying entirely on \r\n\t\t\t\tinformation received from the relevant Operational Railway Control System(s). It is NOT \r\n\t\t\t\tconsidered a safety related system in the Railway Engineering sense. However, \r\n\t\t\t\tthe information reported may trigger user intervention by staff regarding possible \r\n\t\t\t\tincidents on the railway, and confirmation of the situation observed should be obtained prior \r\n\t\t\t\tto any corrective action being taken.</Disclaimer>\r\n  <WhenCreated>6 May 2015 13:03:15</WhenCreated>\r\n  <Line>N</Line>\r\n  <LineName>Northern Line</LineName>\r\n  <S Code=\"KXX\" Mess=\"\" N=\"King's Cross St. Pancras.\" CurTime=\"13:03:15\">\r\n    <P N=\"Northbound - Platform 7\" Num=\"7\" TrackCode=\"TN60067\" NextTrain=\"false\">\r\n      <T LCID=\"1578452\" SetNo=\"120\" TripNo=\"8\" SecondsTo=\"36\" TimeTo=\"1:00\" Location=\"Between Angel and Kings Cross\" Destination=\"High Barnet via Bank\" DestCode=\"225\" Order=\"0\" DepartTime=\"12:03:12\" DepartInterval=\"36\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN60049\" LN=\"N\" />\r\n      <T LCID=\"1574492\" SetNo=\"121\" TripNo=\"11\" SecondsTo=\"108\" TimeTo=\"2:00\" Location=\"At Angel Platform 2\" Destination=\"High Barnet via Bank\" DestCode=\"225\" Order=\"0\" DepartTime=\"12:03:11\" DepartInterval=\"108\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN60012\" LN=\"N\" />\r\n      <T LCID=\"1576802\" SetNo=\"021\" TripNo=\"7\" SecondsTo=\"453\" TimeTo=\"8:00\" Location=\"Between Bank and Moorgate\" Destination=\"Edgware via Bank\" DestCode=\"152\" Order=\"0\" DepartTime=\"12:03:12\" DepartInterval=\"453\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN20217\" LN=\"N\" />\r\n      <T LCID=\"1573132\" SetNo=\"022\" TripNo=\"6\" SecondsTo=\"597\" TimeTo=\"10:00\" Location=\"At London Bridge Plaform 1\" Destination=\"Edgware via Bank\" DestCode=\"152\" Order=\"0\" DepartTime=\"12:03:14\" DepartInterval=\"597\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN20167\" LN=\"N\" />\r\n      <T LCID=\"1575312\" SetNo=\"123\" TripNo=\"8\" SecondsTo=\"818\" TimeTo=\"14:00\" Location=\"At Elephant and Castle Platform 1\" Destination=\"High Barnet via Bank\" DestCode=\"225\" Order=\"0\" DepartTime=\"12:03:01\" DepartInterval=\"818\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN20102\" LN=\"N\" />\r\n      <T LCID=\"1573992\" SetNo=\"023\" TripNo=\"7\" SecondsTo=\"934\" TimeTo=\"16:00\" Location=\"At Kennington Platform 3\" Destination=\"Edgware via Bank\" DestCode=\"152\" Order=\"0\" DepartTime=\"12:03:10\" DepartInterval=\"934\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN20067\" LN=\"N\" />\r\n      <T LCID=\"1574282\" SetNo=\"124\" TripNo=\"10\" SecondsTo=\"1158\" TimeTo=\"19:00\" Location=\"Between Stockwell and Oval\" Destination=\"High Barnet via Bank\" DestCode=\"225\" Order=\"0\" DepartTime=\"12:03:14\" DepartInterval=\"1158\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN10453\" LN=\"N\" />\r\n      <T LCID=\"1575412\" SetNo=\"125\" TripNo=\"8\" SecondsTo=\"1677\" TimeTo=\"28:00\" Location=\"Between Balham and Clapham South\" Destination=\"High Barnet via Bank\" DestCode=\"225\" Order=\"0\" DepartTime=\"12:03:14\" DepartInterval=\"1677\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN10283\" LN=\"N\" />\r\n      <T LCID=\"1575992\" SetNo=\"024\" TripNo=\"6\" SecondsTo=\"1793\" TimeTo=\"30:00\" Location=\"Between Tooting Bec and Balham\" Destination=\"Edgware via Bank\" DestCode=\"152\" Order=\"0\" DepartTime=\"12:03:12\" DepartInterval=\"1793\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN10248\" LN=\"N\" />\r\n    </P>\r\n    <P N=\"Southbound - Platform 8\" Num=\"8\" TrackCode=\"TN60467\" NextTrain=\"false\">\r\n      <T LCID=\"1574692\" SetNo=\"006\" TripNo=\"9\" SecondsTo=\"13\" TimeTo=\"0:30\" Location=\"Between Euston and Kings Cross\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:03:12\" DepartInterval=\"13\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN60474\" LN=\"N\" />\r\n      <T LCID=\"1574842\" SetNo=\"137\" TripNo=\"8\" SecondsTo=\"152\" TimeTo=\"3:00\" Location=\"Between Camden Town and Euston\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:03:14\" DepartInterval=\"152\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN60519\" LN=\"N\" />\r\n      <T LCID=\"1575652\" SetNo=\"005\" TripNo=\"6\" SecondsTo=\"218\" TimeTo=\"4:00\" Location=\"Between Camden Town and Euston\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:03:12\" DepartInterval=\"218\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN60552\" LN=\"N\" />\r\n      <T LCID=\"1575542\" SetNo=\"004\" TripNo=\"6\" SecondsTo=\"348\" TimeTo=\"6:00\" Location=\"At Chalk Farm Platform 2\" Destination=\"Tooting via Bank\" DestCode=\"430\" Order=\"0\" DepartTime=\"12:03:09\" DepartInterval=\"348\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN70339\" LN=\"N\" />\r\n      <T LCID=\"1573102\" SetNo=\"136\" TripNo=\"8\" SecondsTo=\"467\" TimeTo=\"8:00\" Location=\"Between Tufnell Park and Kentish Town\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:03:12\" DepartInterval=\"467\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN60694\" LN=\"N\" />\r\n      <T LCID=\"1574472\" SetNo=\"007\" TripNo=\"9\" SecondsTo=\"627\" TimeTo=\"10:00\" Location=\"At Hampstead Platform 2\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:03:14\" DepartInterval=\"627\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN70432\" LN=\"N\" />\r\n      <T LCID=\"1574932\" SetNo=\"140\" TripNo=\"8\" SecondsTo=\"860\" TimeTo=\"14:00\" Location=\"Left East Finchley\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:02:52\" DepartInterval=\"860\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN40333\" LN=\"N\" />\r\n      <T LCID=\"1574192\" SetNo=\"141\" TripNo=\"11\" SecondsTo=\"886\" TimeTo=\"15:00\" Location=\"Between Finchley Central and East Finchley\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:03:13\" DepartInterval=\"886\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN40359\" LN=\"N\" />\r\n      <T LCID=\"1573692\" SetNo=\"010\" TripNo=\"6\" SecondsTo=\"1176\" TimeTo=\"20:00\" Location=\"At Hendon Central Platform 2\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:03:13\" DepartInterval=\"1176\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN80229\" LN=\"N\" />\r\n      <T LCID=\"1573752\" SetNo=\"143\" TripNo=\"8\" SecondsTo=\"1527\" TimeTo=\"25:00\" Location=\"Between High Barnet and Totteridge &amp; Whetstone\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:03:10\" DepartInterval=\"1527\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN50357\" LN=\"N\" />\r\n      <T LCID=\"1576052\" SetNo=\"011\" TripNo=\"6\" SecondsTo=\"1540\" TimeTo=\"26:00\" Location=\"At Burnt Oak Platform 2\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:03:14\" DepartInterval=\"1540\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN80366\" LN=\"N\" />\r\n      <T LCID=\"1573122\" SetNo=\"012\" TripNo=\"7\" SecondsTo=\"1706\" TimeTo=\"28:00\" Location=\"At Edgware Platform 1\" Destination=\"Morden via Bank\" DestCode=\"308\" Order=\"0\" DepartTime=\"12:02:45\" DepartInterval=\"1706\" Departed=\"0\" Direction=\"0\" IsStalled=\"0\" TrackCode=\"TN80452\" LN=\"N\" />\r\n    </P>\r\n  </S>\r\n</ROOT>"
+                }
+            }
+        }
+    ]
+}
