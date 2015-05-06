@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='tube',
-    version='1.1',
+    version='1.2',
     author='Adam Gilman',
     author_email='me@adamgilman.com',
     packages=['tube'],
