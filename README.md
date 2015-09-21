@@ -4,7 +4,7 @@ tube-python
 Python object wrapper for TfL (Transport for London) TrackerNet information service
 
 [![Build Status](https://travis-ci.org/adamgilman/tube-python.svg?branch=master)](https://travis-ci.org/adamgilman/tube-python)
-
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/adamgilman/tube-python/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/adamgilman/tube-python/?branch=master)
 # Installation
 ```
 pip install tube
