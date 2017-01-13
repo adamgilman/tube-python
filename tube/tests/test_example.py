@@ -1,3 +1,20 @@
+import unittest
+from tube.tubeAPI import Tube
+from tube.tubeAPI import TubeLine, TubeStation
+
+from tube.tubeAPI import TubeLineManager, TubeStationManager
+
+class EaseOfUse(unittest.TestCase):
+	def setUp(self):
+		self.tube = Tube()
+		
+	def test_lines(self):
+		self.assertEqual( type(self.tube.lines), TubeLineManager )
+		self.assertEqual( type(self.tube.lines['C']), TubeLine )
+		
+		self.assertEqual( type(self.tube.stations) , TubeStationManager)
+		self.assertEqual( type(self.tube.stations['OXC']) , TubeStation)
+		
 
 def test_TFLObject():
 	'''

@@ -9,6 +9,14 @@ class Tube(object):
 		self._api = TFLapi()
 		self.map = TubeMap(self._api)
 
+	@property
+	def lines(self):
+		return self.map.allLines()
+	
+	@property
+	def stations(self):
+		return self.map.allStations()
+
 	def getAllTrainsForStation(self, station):
 		if type(station) is TubeStation:
 			station = station.code
